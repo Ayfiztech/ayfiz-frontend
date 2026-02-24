@@ -5,6 +5,8 @@ import BlogViewPage from "./pages/BlogViewPage";
 import Home from "./components/Home/Home";
 import CareerPage from "./pages/CareerPage";
 import ServicesPage from "./pages/servicesPage";
+import ContactUsPage from "./pages/ContactUsPage";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
@@ -29,7 +31,7 @@ function App() {
             }
           />
           <Route path="/career" element={<div><CareerPage/></div>} />
-          <Route path="/contact" element={<div>Contact</div>} />
+          <Route path="/contact" element={<div><ContactUsPage/></div>} />
           <Route
             path="/blog-View"
             element={
@@ -40,6 +42,7 @@ function App() {
           />
         </Routes>
       </div>
+      <Footer/>
     </Router>
   );
 }
