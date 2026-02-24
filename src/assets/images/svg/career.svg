@@ -1,0 +1,32 @@
+<svg width="1107" height="300" viewBox="0 0 1107 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1106" height="300" rx="10" fill="#375CAA"/>
+<g clip-path="url(#clip0_227_1437)">
+<path d="M35.5 120C82.7203 120 121 81.7203 121 34.5C121 -12.7203 82.7203 -51 35.5 -51C-11.7203 -51 -50 -12.7203 -50 34.5C-50 81.7203 -11.7203 120 35.5 120Z" fill="white"/>
+</g>
+<g clip-path="url(#clip1_227_1437)">
+<path d="M893.304 221L869 307.556" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M909.263 221L884.959 307.556" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M925.221 221L900.895 307.556" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M941.158 221L916.854 307.556" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M957.117 221L932.812 307.556" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M973.075 221L948.748 307.556" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M989.012 221L964.707 307.556" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M1004.97 221L980.666 307.556" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M1020.91 221L996.603 307.556" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M1036.86 221L1012.56 307.556" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M1052.82 221L1028.52 307.556" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M1068.76 221L1044.46 307.556" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M1084.72 221L1060.42 307.556" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M1100.68 221L1076.37 307.556" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M1116.61 221L1092.31 307.556" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M1132.57 221L1108.27 307.556" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+</g>
+<defs>
+<clipPath id="clip0_227_1437">
+<path d="M0 10C0 4.47715 4.47715 0 10 0H121V120H0V10Z" fill="white"/>
+</clipPath>
+<clipPath id="clip1_227_1437">
+<rect width="240" height="79" fill="white" transform="translate(867 220)"/>
+</clipPath>
+</defs>
+</svg>

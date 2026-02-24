@@ -5,6 +5,7 @@ import JobFilterCard from "./JobFilterCard";
 import { motion } from "framer-motion";
 import JobCard from "../Common/JobCard";
 import DetailedJobCard from "../Common/DetailedJobCard";
+import WorkTogether from "./WorkTogether";
 
 const CareerBanner = () => {
   const fadeSlideDown = {
@@ -90,7 +91,6 @@ const CareerBanner = () => {
 
       <div className=" min-h-screen p-4 mt-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
-      
           <div className=" -[700px] overflow-y-auto space-y-4">
             {jobsData.map((job) => (
               <div
@@ -107,7 +107,6 @@ const CareerBanner = () => {
                   level={job.level}
                   locations={job.locations}
                   description={job.responsibilities}
-                  
                 />
               </div>
             ))}
@@ -129,6 +128,8 @@ const CareerBanner = () => {
             />
           </div>
         </div>
+
+        <WorkTogether />
       </div>
     </>
   );

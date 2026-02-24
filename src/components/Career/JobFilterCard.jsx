@@ -19,7 +19,7 @@ const JobFilterCard = () => {
         </div>
 
        
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4  flex-wrap">
         
           <div className="w-full md:w-auto">
             <label className="block text-sm text-gray-600 mb-1">

@@ -5,7 +5,7 @@ const JobCard = ({ title, level, locations = [], description ,  selected = false
  }) => {
   return (
     <div className="w-full">
-      <div className="bg-gray-100 border  rounded-lg p-5 sm:p-6 transition duration-300 hover:shadow-md">
+      <div className="bg-gray-100 border-transparent  rounded-lg p-5 sm:p-6 transition duration-300 hover:shadow-md">
         <h3 className="text-lg sm:text-xl font-semibold ">
           {title}
         </h3>
