@@ -38,7 +38,7 @@ const Banner = ({ title, bgImage, breadcrumb }) => {
               <li>
                 <a
                   href="/"
-                  className="text-gray-300 hover:text-white transition"
+                  className="text-[#767676] hover:text-white transition"
                 >
                   Home
                 </a>

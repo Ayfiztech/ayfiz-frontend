@@ -11,7 +11,6 @@ import im5 from "../../assets/images/blog5.jpg";
 import im6 from "../../assets/images/blog6.jpg";
 
 const BlogSection = () => {
-
   const blogs = [
     {
       heading: "Blog Post",
@@ -69,9 +68,7 @@ const BlogSection = () => {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {blogs.map((blog, index) => (
             <Link to={blog.path} key={index}>
-              <div               className="overflow-hidden  border border-gray-200 bg-white shadow-md transition duration-300 hover:shadow-xl"
->
-                
+              <div className="overflow-hidden  border border-gray-200 bg-white shadow-md transition duration-300 hover:shadow-xl">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
@@ -98,7 +95,6 @@ const BlogSection = () => {
                     <span>{blog.date}</span>
                   </div>
                 </div>
-
               </div>
             </Link>
           ))}

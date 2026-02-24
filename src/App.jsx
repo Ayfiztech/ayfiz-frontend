@@ -3,6 +3,7 @@ import BlogPage from "./pages/BlogPage";
 import Navbar from "./components/layout/Navbar";
 import BlogViewPage from "./pages/BlogViewPage";
 import Home from "./components/Home/Home";
+import CareerPage from "./pages/CareerPage";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
               </div>
             }
           />
-          <Route path="/career" element={<div>Career</div>} />
+          <Route path="/career" element={<div><CareerPage/></div>} />
           <Route path="/contact" element={<div>Contact</div>} />
           <Route
             path="/blog-View"
