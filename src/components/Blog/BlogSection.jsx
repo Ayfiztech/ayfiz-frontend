@@ -1,0 +1,103 @@
+import { motion } from "framer-motion";
+import { FaRegCalendarAlt } from "react-icons/fa";
+
+// import your images
+import im1 from "../../assets/images/blog1.jpg";
+import im2 from "../../assets/images/blog2.jpg";
+import im3 from "../../assets/images/blog3.jpg";
+import im4 from "../../assets/images/blog4.jpg";
+import im5 from "../../assets/images/blog5.jpg";
+import im6 from "../../assets/images/blog6.jpg";
+
+const BlogSection = () => {
+
+  const blogs = [
+    {
+      heading: "Blog Post",
+      label:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+      date: "22 Oct 2023",
+      image: im1,
+    },
+    {
+      heading: "Blog Post",
+      label:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+      date: "22 Oct 2023",
+      image: im2,
+    },
+    {
+      heading: "Blog Post",
+      label:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+      date: "22 Oct 2023",
+      image: im3,
+    },
+    {
+      heading: "Blog Post",
+      label:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+      date: "22 Oct 2023",
+      image: im4,
+    },
+    {
+      heading: "Blog Post",
+      label:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+      date: "22 Oct 2023",
+      image: im5,
+    },
+    {
+      heading: "Blog Post",
+      label:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+      date: "22 Oct 2023",
+      image: im6,
+    },
+  ];
+
+  return (
+    <section className="bg-[#F0F3F9] py-12">
+      <div className="container mx-auto px-4 lg:px-12">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {blogs.map((blog, index) => (
+            <div
+              key={index}
+              className="overflow-hidden  border border-gray-200 bg-white shadow-md transition duration-300 hover:shadow-xl"
+            >
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden"
+              >
+                <img
+                  src={blog.image}
+                  alt={blog.heading}
+                  className="h-56 w-full object-cover"
+                />
+              </motion.div>
+
+              
+              <div className="p-5">
+                <h5 className="mb-2 text-lg  font-normal text-gray-900 sm:text-xl lg:text-2xl">
+                  {blog.heading}
+                </h5>
+
+                <p className="mb-3 text-sm text-[#555555] line-clamp-3">
+                  {blog.label}
+                </p>
+
+                <div className="flex items-center gap-2 text-sm text-[#555555]">
+                  <FaRegCalendarAlt className="text-black" />
+                  <span>{blog.date}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default BlogSection;
