@@ -9,6 +9,10 @@
   --font-playfair: "Playfair Display", serif;
   --font-poppins: "Poppins", sans-serif;
   --font-raleway: "Raleway", sans-serif;
+
+
+  --color-primary: #1A439A;
+  --color-primary-dark:  #1A439A;
 }
 
 body {
