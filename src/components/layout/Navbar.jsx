@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav
       className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
-        isHome ? "bg-blue-700 text-white" : "bg-white text-gray-800 shadow-md"
+        isHome ? "bg-[#CFD8EB] text-white" : "bg-white text-gray-800 shadow-md"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6  flex justify-between items-center">
