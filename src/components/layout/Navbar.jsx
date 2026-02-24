@@ -86,7 +86,7 @@ const Navbar = () => {
           <Link
             to="/contact"
             className={`px-5 py-2 rounded ${
-              isHome ? "bg-white text-primary" : "bg-primary-dark text-white"
+              isHome ? "bg-white text-primary" : "bg-primary text-white"
             }`}
           >
             Reach Us
@@ -101,7 +101,7 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white text-gray-800 px-6 pb-6 shadow-lg border-t border-gray-100">
+        <div className="md:hidden bg-white text-gray-800 px-6 pb-6 shadow-lg border-t border-gray-100 808">
           <div className="flex flex-col space-y-4 pt-4">
             <Link
               to="/about"
