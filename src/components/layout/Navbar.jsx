@@ -40,11 +40,13 @@ const Navbar = () => {
             onMouseLeave={() => setDropdownOpen(false)}
           >
             <button
+             onClick={() => navigate("/offers")}
               className={`flex items-center gap-1 ${
                 isServicesActive
                   ? "text-[#4F5665] font-semibold"
                   : "text-[#02002E]"
               }`}
+              
             >
               Services <ChevronDown size={16} />
             </button>
