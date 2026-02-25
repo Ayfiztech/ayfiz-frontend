@@ -2,16 +2,16 @@ import Banner from "../../Common/Banner";
 import CareerImage from "../../../assets/images/branding.png";
 import OfferBlock from "../../Common/OfferBlock";
 
-import offersImage from "../../../assets/images/Offers.png";
+import offersImage from "../../../assets/images/trading.png";
 import ContactCTA from "./ContactCTA";
 
-const BrandingDetail = () => {
+const TradingDetail = () => {
   return (
     <>
       <Banner title="Offers" bgImage={CareerImage} breadcrumb="Offers" />
       <OfferBlock
       subtitle="LOREM IPSUM"
-      title="Branding"
+      title="Trading"
       image={offersImage}
       paragraphs={[
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -32,4 +32,4 @@ const BrandingDetail = () => {
   );
 };
 
-export default BrandingDetail;
+export default TradingDetail;

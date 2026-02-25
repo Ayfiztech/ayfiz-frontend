@@ -8,6 +8,8 @@ import ServicesPage from "./pages/servicesPage";
 import ContactUsPage from "./pages/ContactUsPage";
 import Footer from "./components/layout/Footer";
 import BrandDetailPage from "./pages/BrandDetailPage";
+import MediaDetailPage from "./pages/MediaDetailPage";
+import TradingDetailPage from "./pages/TradingDetailPage";
 
 function App() {
   return (
@@ -76,7 +78,27 @@ function App() {
               </div>
             }
           />
+
+           <Route
+            path="/MediaDetail"
+            element={
+              <div>
+                < MediaDetailPage />
+              </div>
+            }
+          />
+
+           <Route
+            path="/TradingDetail"
+            element={
+              <div>
+                <TradingDetailPage />
+              </div>
+            }
+          />
         </Routes>
+
+       
       </div>
       <Footer />
     </Router>
