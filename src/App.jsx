@@ -14,8 +14,9 @@ import TradingDetailPage from "./pages/TradingDetailPage";
 function App() {
   return (
     <Router>
+      <div className="flex flex-col min-h-screen bg-gray-100">
       <Navbar />
-      <div className="pt-24">
+      <>
         <Routes>
           <Route
             path="/"
@@ -99,8 +100,9 @@ function App() {
         </Routes>
 
        
-      </div>
+      </>
       <Footer />
+      </div>
     </Router>
   );
 }
