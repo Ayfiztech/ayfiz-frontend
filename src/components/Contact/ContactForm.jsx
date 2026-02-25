@@ -5,11 +5,13 @@ import bgImage from "../../assets/images/contactbg.png";
 const ContactForm = () => {
   return (
     <section
-      className="relative w-full bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${bgImage})` }}
+      className="relative w-full 
+  bg-[linear-gradient(to_right,_white_75%,_#2f4fa3_25%)]
+  lg:bg-[linear-gradient(to_right,_white_75%,_#2f4fa3_25%)]
+  bg-white"
     >
-      <div className="relative  max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center ">
-        <div>
+      <div className="relative  max-w-7xl mx-auto p-6 grid lg:grid-cols-2 gap-12 items-center ">
+        <div className="bg-white rounded-md">
           <h2 className="text-4xl font-semibold text-gray-900 font-playfair">
             Get in <span className="text-primary">Touch</span>
           </h2>
@@ -19,7 +21,7 @@ const ContactForm = () => {
             molestie vel, ornare non id blandit netus.
           </p>
 
-          <div className="mt-8 max-w-xl">
+          <div className="mt-8 max-w-xl mr-2">
             <form className="space-y-5">
               <input
                 type="text"
@@ -56,29 +58,28 @@ const ContactForm = () => {
               </button>
             </form>
 
-            {/* Contact Info */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8 text-sm text-gray-600">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8 text-sm ">
               <div className="flex items-start gap-2">
-                <FiPhone className="mt-1 text-[#2f4fa3]" />
+                <FiPhone size={20} className="mt-2 " />
                 <div>
                   <p className="font-semibold">PHONE</p>
-                  <p>03 5432 1234</p>
+                  <p className="text-[#2f4fa3]">03 5432 1234</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-2">
-                <FaFax className="mt-1 text-[#2f4fa3]" />
+                <FaFax size={20} className="mt-2 " />
                 <div>
                   <p className="font-semibold">FAX</p>
-                  <p>03 5432 1234</p>
+                  <p className="text-[#2f4fa3]">03 5432 1234</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-2">
-                <FiMail className="mt-1 text-[#2f4fa3]" />
+                <FiMail size={20} className="mt-2 " />
                 <div>
                   <p className="font-semibold">EMAIL</p>
-                  <p>info@marcc.com.au</p>
+                  <p className="text-[#2f4fa3]">info@marcc.com.au</p>
                 </div>
               </div>
             </div>
