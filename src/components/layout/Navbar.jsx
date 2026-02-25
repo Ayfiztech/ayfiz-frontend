@@ -31,7 +31,7 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-8 font-medium">
           <Link to="/about" className={linkClass("/about")}>
-            About Us
+            About
           </Link>
 
           <div
@@ -82,7 +82,7 @@ const Navbar = () => {
             Career
           </Link>
           <Link to="/contact" className={linkClass("/contact")}>
-            Contact Us
+            Contact
           </Link>
 
           <Link
@@ -110,7 +110,7 @@ const Navbar = () => {
               className="hover:text-blue-700 transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              About Us
+              About
             </Link>
 
             <div className="flex flex-col">
@@ -181,7 +181,7 @@ const Navbar = () => {
               className="hover:text-blue-700"
               onClick={() => setIsOpen(false)}
             >
-              Contact Us
+              Contact
             </Link>
 
             {/* Primary CTA Button */}

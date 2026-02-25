@@ -7,6 +7,7 @@ import CareerPage from "./pages/CareerPage";
 import ServicesPage from "./pages/servicesPage";
 import ContactUsPage from "./pages/ContactUsPage";
 import Footer from "./components/layout/Footer";
+import BrandDetailPage from "./pages/BrandDetailPage";
 
 function App() {
   return (
@@ -14,11 +15,24 @@ function App() {
       <Navbar />
       <div className="pt-24">
         <Routes>
-          <Route path="/" element={<div><Home/></div>} />
+          <Route
+            path="/"
+            element={
+              <div>
+                <Home />
+              </div>
+            }
+          />
           <Route path="/about" element={<div>About</div>} />
-          <Route path="/offers" element={<div><ServicesPage/></div>} />
+          <Route
+            path="/offers"
+            element={
+              <div>
+                <ServicesPage />
+              </div>
+            }
+          />
 
-         
           <Route path="/services/brand" element={<div>Brand</div>} />
           <Route path="/services/media" element={<div>Media</div>} />
           <Route path="/services/it" element={<div>IT</div>} />
@@ -30,8 +44,22 @@ function App() {
               </div>
             }
           />
-          <Route path="/career" element={<div><CareerPage/></div>} />
-          <Route path="/contact" element={<div><ContactUsPage/></div>} />
+          <Route
+            path="/career"
+            element={
+              <div>
+                <CareerPage />
+              </div>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <div>
+                <ContactUsPage />
+              </div>
+            }
+          />
           <Route
             path="/blog-View"
             element={
@@ -40,9 +68,17 @@ function App() {
               </div>
             }
           />
+          <Route
+            path="/BrandDetail"
+            element={
+              <div>
+                <BrandDetailPage />
+              </div>
+            }
+          />
         </Routes>
       </div>
-      <Footer/>
+      <Footer />
     </Router>
   );
 }

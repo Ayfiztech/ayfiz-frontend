@@ -1,26 +1,30 @@
-import { FaFacebookF, FaInstagram, FaYoutube, FaMapMarkerAlt, FaPhoneAlt, FaPaperPlane } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaPaperPlane,
+} from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Logo from "../../assets/images/header-white.png";
 const Footer = () => {
   return (
     <footer className="bg-[#1f2430] text-gray-300 pt-14 pb-6">
-
       <div className="max-w-7xl mx-auto px-6">
-
         {/* GRID */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-
           {/* LOGO + ABOUT */}
           <div>
-           <img 
-  src={Logo} 
-  alt="AYFIZ ABSOLUTES" 
-   className="h-24 w-auto object-contain"
-/>
+            <img
+              src={Logo}
+              alt="AYFIZ ABSOLUTES"
+              className="h-24 w-auto object-contain"
+            />
 
             <p className="text-sm leading-relaxed mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
 
             <div className="flex gap-3">
@@ -57,7 +61,6 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4">VOLUPTATE</h3>
 
             <div className="space-y-4 text-sm">
-
               <div className="flex gap-3">
                 <FaMapMarkerAlt className="mt-1 text-blue-400" />
                 <div>
@@ -81,7 +84,6 @@ const Footer = () => {
                   <p>info@xxxx.com</p>
                 </div>
               </div>
-
             </div>
           </div>
 
@@ -105,15 +107,13 @@ const Footer = () => {
               Lorem ipsum dolor sit amet, consectetur elit,
             </p>
           </div>
-
         </div>
 
         {/* Divider */}
         <div className="border-t border-gray-600 mt-10 pt-4 text-center text-xs text-gray-400">
-          Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit,
-          Sed Do Eiusmod Tempor Incididu
+          Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do
+          Eiusmod Tempor Incididu
         </div>
-
       </div>
     </footer>
   );

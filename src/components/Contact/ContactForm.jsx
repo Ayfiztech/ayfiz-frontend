@@ -5,14 +5,10 @@ import bgImage from "../../assets/images/contactbg.png";
 const ContactForm = () => {
   return (
     <section
-      className="relative w-full bg-cover bg-center bg-no-repeat py-20"
+      className="relative w-full bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-  
-
-      <div className="relative  max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-        
-        {/* LEFT */}
+      <div className="relative  max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center ">
         <div>
           <h2 className="text-4xl font-semibold text-gray-900 font-playfair">
             Get in <span className="text-primary">Touch</span>
@@ -23,7 +19,6 @@ const ContactForm = () => {
             molestie vel, ornare non id blandit netus.
           </p>
 
-         
           <div className="mt-8 max-w-xl">
             <form className="space-y-5">
               <input
@@ -99,7 +94,6 @@ const ContactForm = () => {
             loading="lazy"
           />
         </div>
-
       </div>
     </section>
   );

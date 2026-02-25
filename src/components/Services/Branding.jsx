@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import { useNavigate } from "react-router-dom";
 import LApplication from "../../assets/images/Offers.png";
 import ServiceCard from "../Common/ServiceCard";
 
@@ -14,6 +14,7 @@ const slideUp = {
 };
 
 const Branding = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="container mx-auto mt-16 p-2 pt-16 max-sm:mt-2 max-sm:pt-4 lg:px-4">
@@ -30,7 +31,7 @@ const Branding = () => {
               title="Branding"
               description="We will review your Business Activity and its revenue generation model, conduct identity and credit checks, and assess your business funding needs based on the information you provided to us. We will conduct an affordability check for your business to ensure that your business is able to meet up with our funding cost."
               buttonText="View More"
-              onClick={() => alert("Clicked")}
+             onClick={() => navigate("/BrandDetail")}
             />
           </motion.div>
           <div aria-hidden="true" className="mt-10 max-sm:order-1 lg:mt-0">
