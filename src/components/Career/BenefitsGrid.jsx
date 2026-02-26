@@ -56,10 +56,10 @@ const BenefitsGrid = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-semibold font-playfair text-primary-dark mb-4 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-semibold font-playfair text-[#0A1889] mb-4 tracking-tight">
             What benefits are waiting for you?
           </h2>
-          <p className="text-gray-500 text-lg">
+          <p className="text-gray-400 text-lg">
             Visioncraft offers a variety of hand-picked benefits that you can take advantage of!
           </p>
         </div>

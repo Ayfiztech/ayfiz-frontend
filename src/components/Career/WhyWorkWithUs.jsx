@@ -50,7 +50,7 @@ const WhyWorkWithUs = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <header className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif text-[#3E5C9A] max-w-2xl mx-auto leading-tight">
+          <h2 className="text-4xl md:text-5xl font-playfair text-[#0A1889] max-w-2xl mx-auto leading-tight">
             What make Ayfiz a great place to work?
           </h2>
         </header>

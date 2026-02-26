@@ -69,7 +69,7 @@ const JoinTeamSection = () => {
     <section className="w-full bg-white py-16 px-6 md:py-24">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
-          <h2 className="text-4xl md:text-5xl font-playfair font-semibold text-blue-900">
+          <h2 className="text-4xl md:text-5xl font-playfair font-semibold text-[#0A1889]">
             Join the team
           </h2>
           <p className="text-gray-600 leading-relaxed max-w-md">

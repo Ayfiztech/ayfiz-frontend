@@ -1,22 +1,71 @@
 import React from 'react';
 import ValueCard from '../Common/ValueCard';
-
+import { 
+  HiOutlineUserGroup, HiOutlineLightningBolt, HiOutlineTrendingUp, 
+  HiOutlineSearch, HiOutlineShieldCheck, HiOutlineSparkles,
+  HiOutlineFire, HiOutlineChatAlt2, HiOutlineEmojiHappy, HiOutlineBriefcase 
+} from "react-icons/hi";
 const valuesData = [
   // Column 1
-  { number: "01", title: "Deliver the best customer experience", subtitle: "(#BEATEXTS)", color: "border-purple-400", textColor: "text-purple-400", col: 1 },
-  { number: "02", title: "Embrace hard work", subtitle: "(#HARDWORK)", color: "border-blue-300", textColor: "text-blue-300", col: 1 },
-  { number: "03", title: "Drive urgency", subtitle: "(#URGENCY)", color: "border-pink-300", textColor: "text-pink-300", col: 1 },
+  { 
+    number: "01", 
+    title: "Deliver the best customer experience", 
+    subtitle: "(#BEATEXTS)", 
+    color: "border-purple-400", 
+    textColor: "text-purple-400", 
+    Icon: HiOutlineUserGroup, // Added Icon
+    col: 1 
+  },
+  { 
+    number: "02", 
+    title: "Embrace hard work", 
+    subtitle: "(#HARDWORK)", 
+    color: "border-blue-300", 
+    textColor: "text-blue-300", 
+    Icon: HiOutlineBriefcase,
+    col: 1 
+  },
+  { 
+    number: "03", 
+    title: "Drive urgency", 
+    subtitle: "(#URGENCY)", 
+    color: "border-pink-300", 
+    textColor: "text-pink-300", 
+    Icon: HiOutlineLightningBolt,
+    col: 1 
+  },
   
   // Column 2
-  { number: "04", title: "Grow 1% every day", subtitle: "(#KEEPWRITINGBOOKS)", color: "border-yellow-400", textColor: "text-yellow-400", col: 2 },
-  { number: "05", title: "Be in the details", subtitle: "(#DETAILSMATTER)", color: "border-green-300", textColor: "text-green-300", col: 2 },
-  { number: "06", title: "Do hard things", subtitle: "(#RESILIENT)", color: "border-red-300", textColor: "text-red-300", col: 2 },
-  { number: "07", title: "Be here to be exceptional", subtitle: "(#GREATNESS)", color: "border-indigo-400", textColor: "text-indigo-400", col: 2 },
+  { 
+    number: "04", 
+    title: "Grow 1% every day", 
+    subtitle: "(#KEEPWRITINGBOOKS)", 
+    color: "border-yellow-400", 
+    textColor: "text-yellow-400", 
+    Icon: HiOutlineTrendingUp,
+    col: 2 
+  },
+  { 
+    number: "05", 
+    title: "Be in the details", 
+    subtitle: "(#DETAILSMATTER)", 
+    color: "border-green-300", 
+    textColor: "text-green-300", 
+    Icon: HiOutlineSearch,
+    col: 2 
+  },
+  { 
+    number: "06",  title: "Do hard things", subtitle: "(#RESILIENT)", color: "border-red-300", textColor: "text-red-300", Icon: HiOutlineShieldCheck, col: 2 },
+  { 
+    number: "07", title: "Be here to be exceptional", subtitle: "(#GREATNESS)", color: "border-indigo-400", textColor: "text-indigo-400", Icon: HiOutlineSparkles, col: 2 },
   
   // Column 3
-  { number: "08", title: "Be scrappy", subtitle: "(#SCRAPPY)", color: "border-blue-400", textColor: "text-blue-400", col: 3 },
-  { number: "09", title: "Be direct", subtitle: "(#BEDIRECT)", color: "border-pink-400", textColor: "text-pink-400", col: 3 },
-  { number: "10", title: "Be fun to work with", subtitle: "(#OPEN)", color: "border-yellow-500", textColor: "text-yellow-500", col: 3 },
+  { 
+    number: "08", title: "Be scrappy", subtitle: "(#SCRAPPY)", color: "border-blue-400", textColor: "text-blue-400", Icon: HiOutlineFire, col: 3 },
+  { 
+    number: "09", title: "Be direct", subtitle: "(#BEDIRECT)", color: "border-pink-400", textColor: "text-pink-400", Icon: HiOutlineChatAlt2, col: 3 },
+  { 
+    number: "10", title: "Be fun to work with", subtitle: "(#OPEN)", color: "border-yellow-500", textColor: "text-yellow-500", Icon: HiOutlineEmojiHappy, col: 3 },
 ];
 
 const CoreValues = () => {

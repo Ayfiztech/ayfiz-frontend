@@ -16,7 +16,7 @@ const SocialFeed = () => {
         
         {/* Left Text and Large Group Image */}
         <div className="lg:w-2/5 space-y-8">
-          <h2 className="text-4xl md:text-5xl font-playfair text-[#3E5C9A] leading-tight">
+          <h2 className="text-4xl md:text-5xl font-playfair text-primary leading-tight">
             Follow us on social to see what we're up to!
           </h2>
           <div className="overflow-hidden rounded-sm">

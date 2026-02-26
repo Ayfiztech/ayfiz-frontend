@@ -34,7 +34,7 @@ const JobBoard = () => {
   return (
     <section className="bg-[#F7F9FC] py-16 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-playfair text-[#3E5C9A] text-center mb-16">
+        <h1 className="text-4xl md:text-5xl font-playfair text-primary text-center mb-16">
           We have 17 open positions now!
         </h1>
 
@@ -78,7 +78,7 @@ const JobBoard = () => {
                 
                 <div className="flex gap-2 mb-6">
                   {job.tags.map(tag => (
-                    <span key={tag} className="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-wider rounded-full border border-blue-100">
+                    <span key={tag} className="px-3 py-1 bg-blue-50 text-primary border border-primary text-[10px] font-bold uppercase tracking-wider rounded-full border border-blue-100">
                       {tag}
                     </span>
                   ))}
@@ -89,7 +89,7 @@ const JobBoard = () => {
                 </p>
 
                 <div className="flex justify-end">
-                  <button className="bg-[#2D3154] text-white px-6 py-2 rounded-full text-sm font-medium flex items-center gap-2 hover:bg-[#1e213a] transition-colors">
+                  <button className="bg-primary text-white px-6 py-2 rounded-full text-sm font-medium flex items-center gap-2 hover:bg-[#1e213a] transition-colors">
                     See positions <HiOutlineArrowNarrowRight />
                   </button>
                 </div>
