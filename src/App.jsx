@@ -10,6 +10,7 @@ import Footer from "./components/layout/Footer";
 import BrandDetailPage from "./pages/BrandDetailPage";
 import MediaDetailPage from "./pages/MediaDetailPage";
 import TradingDetailPage from "./pages/TradingDetailPage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
               </div>
             }
           />
-          <Route path="/about" element={<div>About</div>} />
+          <Route path="/about" element={<div><AboutPage/></div>} />
           <Route
             path="/offers"
             element={

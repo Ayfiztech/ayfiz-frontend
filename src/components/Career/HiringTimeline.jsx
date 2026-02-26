@@ -32,7 +32,7 @@ const Step = ({ id, title, desc, side }) => (
 
 const HiringTimeline = () => {
   return (
-    <section className="relative w-full min-h-screen py-24 px-6 overflow-hidden bg-white">
+    <section className="relative w-full py-24 px-6 overflow-hidden bg-white">
       {/* Decorative Background Gradient */}
       
       <div className="max-w-4xl mx-auto text-center mb-20">

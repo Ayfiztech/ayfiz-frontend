@@ -25,7 +25,7 @@ const Navbar = () => {
           <img src={Logo} alt="Logo" className="h-10 md:h-14 lg:h-16 w-auto object-contain" />
         </Link>
         <div className="hidden md:flex items-center gap-4 lg:gap-8 font-medium text-sm lg:text-base">
-          <Link to="/about" className={linkClass("/about")}>About</Link>
+          <Link to="/about" className={linkClass("/about")}>Who We Are</Link>
 
           <div 
             className="relative group"
@@ -73,7 +73,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-2xl animate-in slide-in-from-top duration-300">
           <div className="flex flex-col p-6 space-y-4 font-medium">
-            <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
+            <Link to="/about" onClick={() => setIsOpen(false)}>Who We Are</Link>
             <div className="flex flex-col">
               <div className="flex justify-between items-center py-1" onClick={() => setServicesOpen(!servicesOpen)}>
                 <span className={isOffersActive ? "text-blue-700" : ""}>What we offer</span>
