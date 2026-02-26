@@ -1,4 +1,5 @@
 import React from "react";
+import job from "../../assets/images/jobbg.png"
 
 const steps = [
   {
@@ -72,15 +73,14 @@ const Step = ({ id, title, desc, side }) => (
 const HiringTimeline = () => {
   return (
     <section className="relative w-full py-24 px-6 overflow-hidden bg-white">
-      <div
-        className="absolute -top-[15%] left-1/2 -translate-x-1/2 w-[150%] h-[600px] 
-               rounded-[100%] opacity-50 pointer-events-none blur-[100px]"
-        style={{
-          background: `radial-gradient(circle at center, #95D5FB 0%, #0040D8 50%, #395195 100%)`
-        }}
-      />
+     <img 
+    src={job} 
+    alt=""
+    className="absolute -top-[10%] left-1/2 -translate-x-1/2 w-[150%] h-[700px] 
+               object-cover   pointer-events-none " 
+  />
 
-      <div className="max-w-4xl mx-auto text-center mb-20 relative z-10">
+      <div className="max-w-4xl mx-auto text-center mb-20 mt-12 relative z-10">
         <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#2D3154] mb-6">
           How to become a Ayfizian?
         </h2>
