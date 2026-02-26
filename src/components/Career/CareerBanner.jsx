@@ -1,11 +1,15 @@
-import React, { useState } from "react";
-import Banner from "../Common/Banner";
-import CareerImage from "../../assets/images/career.png";
-import JobFilterCard from "./JobFilterCard";
 import { motion } from "framer-motion";
-import JobCard from "../Common/JobCard";
-import DetailedJobCard from "../Common/DetailedJobCard";
-import WorkTogether from "./WorkTogether";
+import CareerImage from "../../assets/images/career.png";
+import Banner from "../Common/Banner";
+import BenefitsGrid from "./BenefitsGrid";
+import BlogSection from "./BlogCard";
+import GallerySection from "./GallerySection";
+import HiringTimeline from "./HiringTimeline";
+import JobBoard from "./JobBoard";
+import JoinTeamSection from "./JoinTeamSection";
+import SocialFeed from "./SocialFeed";
+import TestimonialSection from "./TestimonialSection";
+import WhyWorkWithUs from "./WhyWorkWithUs";
 
 const CareerBanner = () => {
   const fadeSlideDown = {
@@ -20,116 +24,23 @@ const CareerBanner = () => {
     },
   };
 
-  const jobsData = [
-    {
-      id: 1,
-      title: "Full Stack Developer",
-      level: "Mid-Level",
-      locations: ["Chennai", "Madurai"],
-      responsibilities:
-        "Designing and implementing user interfaces using HTML, CSS, and JavaScript frameworks...",
-      specifications: [
-        "Proficiency in HTML, CSS, JavaScript.",
-        "Experience with Node.js and databases.",
-        "Strong Git knowledge.",
-      ],
-      employmentType: "Full-time",
-      workplaceType: "Hybrid",
-      salary: "Commensurate with experience",
-      experienceRequired: "Minimum 3 Years",
-      jobLocation: "Chennai, Madurai, Coimbatore",
-    },
-    {
-      id: 2,
-      title: "React Developer",
-      level: "Mid-Level",
-      locations: ["Chennai", "Madurai"],
-      responsibilities:
-        "Developing and implementing front-end applications using React...",
-      specifications: [
-        "Strong React knowledge.",
-        "State management experience.",
-        "API integration skills.",
-      ],
-      employmentType: "Full-time",
-      workplaceType: "Hybrid",
-      salary: "Based on experience",
-      experienceRequired: "Minimum 2 Years",
-      jobLocation: "Chennai",
-    },
-    {
-      id: 3,
-      title: "Flutter Developer",
-      level: "Mid-Level",
-      locations: ["Chennai", "Madurai"],
-      responsibilities:
-        "Building cross-platform mobile applications using Flutter...",
-      specifications: [
-        "Flutter & Dart expertise.",
-        "Firebase integration.",
-        "REST API knowledge.",
-      ],
-      employmentType: "Full-time",
-      workplaceType: "Onsite",
-      salary: "Negotiable",
-      experienceRequired: "Minimum 2 Years",
-      jobLocation: "Madurai",
-    },
-  ];
-
-  const [selectedJob, setSelectedJob] = useState(jobsData[0]);
-
   return (
     <>
-      <Banner title="Career" bgImage={CareerImage} breadcrumb="Career" />
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-10 font-poppins">
+      <Banner title="Life at Ayfiz" bgImage={CareerImage} breadcrumb="Career" />
+      <JoinTeamSection />
+      <WhyWorkWithUs />
+      <BenefitsGrid />
+      <GallerySection />
+      <TestimonialSection />
+
+      <div>
         <motion.div variants={fadeSlideDown} initial="hidden" animate="visible">
           {" "}
-          <JobFilterCard />
+          <HiringTimeline />
+          <JobBoard />
+          <BlogSection />
+          <SocialFeed />
         </motion.div>
-      </div>
-
-      <div className=" min-h-screen p-4 mt-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className=" -[700px] overflow-y-auto space-y-4">
-            {jobsData.map((job) => (
-              <div
-                key={job.id}
-                onClick={() => setSelectedJob(job)}
-                className={`cursor-pointer transition ${
-                  selectedJob.id === job.id
-                    ? "border border-blue-500 rounded-lg text-primary"
-                    : ""
-                }`}
-              >
-                <JobCard
-                  title={job.title}
-                  level={job.level}
-                  locations={job.locations}
-                  description={job.responsibilities}
-                />
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-gray-100 rounded-xl p-4 h-[700px] overflow-y-auto">
-            <DetailedJobCard
-              title={selectedJob.title}
-              level={selectedJob.level}
-              locations={selectedJob.locations}
-              responsibilities={selectedJob.responsibilities}
-              specifications={selectedJob.specifications}
-              employmentType={selectedJob.employmentType}
-              workplaceType={selectedJob.workplaceType}
-              salary={selectedJob.salary}
-              experienceRequired={selectedJob.experienceRequired}
-              jobLocation={selectedJob.jobLocation}
-              onApply={() => alert("Apply for " + selectedJob.title)}
-            />
-          </div>
-        </div>
-
-        <WorkTogether />
       </div>
     </>
   );
