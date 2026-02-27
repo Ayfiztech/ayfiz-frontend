@@ -11,6 +11,7 @@ import BrandDetailPage from "./pages/BrandDetailPage";
 import MediaDetailPage from "./pages/MediaDetailPage";
 import TradingDetailPage from "./pages/TradingDetailPage";
 import AboutPage from "./pages/AboutPage";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
             path="/"
             element={
               <div>
-                <Home />
+                <HomePage />
               </div>
             }
           />
