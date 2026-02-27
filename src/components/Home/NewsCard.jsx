@@ -14,8 +14,8 @@ const newsItems = [
   },
   {
     id: 2,
-     tag: "Lorem",
-   title: "LOREM LOREM LOREM",
+    tag: "Lorem",
+    title: "LOREM LOREM LOREM",
     date: "27 August, 2024",
     time: "10 mins",
     image:
@@ -34,8 +34,8 @@ const newsItems = [
   },
   {
     id: 4,
-   tag: "Lorem",
-   title: "LOREM LOREM LOREM",
+    tag: "Lorem",
+    title: "LOREM LOREM LOREM",
     date: "27 August, 2024",
     time: "5 mins",
     image:
@@ -44,7 +44,7 @@ const newsItems = [
   },
   {
     id: 5,
-   tag: "Lorem",
+    tag: "Lorem",
     title: "LOREM LOREM LOREM",
     date: "27 August, 2024",
     time: "5 mins",
@@ -84,13 +84,15 @@ const NewsCard = ({ item }) => {
 
         <h3
           className={`text-white font-semibold mt-3 leading-snug ${
-            item.size === "large" ? "text-lg md:text-xl" : "text-sm md:text-base"
+            item.size === "large"
+              ? "text-lg md:text-xl"
+              : "text-sm md:text-base"
           }`}
         >
           {item.title}
         </h3>
 
-        <div className="flex items-center text-gray-300 text-xs mt-3 gap-4">
+        <div className="flex items-center flex-wrap text-gray-300 text-xs mt-3 gap-4">
           <div className="flex items-center gap-1">
             <Calendar size={12} />
             {item.date}
@@ -112,10 +114,10 @@ export default function TrendingNews() {
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-white">
+            <h2 className="text-4xl  font-playfair font-bold text-white my-2">
               Trending News
             </h2>
-            <div className="w-12 h-1 bg-primary mt-2 rounded-full" />
+            <div className="w-12 h-1 bg-primary mb-2 mt-4 rounded-full" />
           </div>
 
           <button className="text-xs md:text-sm bg-[#111c2a] text-gray-300 px-4 py-2 rounded-md hover:bg-orange-500 hover:text-white transition">

@@ -1,55 +1,67 @@
 import React from "react";
+import TeamImage from "../../assets/images/team-working.png"; 
 
 export default function AboutAyfiz() {
   return (
-    <section className="relative overflow-hidden bg-gray-100 py-16">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-10 items-center">
+    <section className="relative bg-white py-12 lg:py-20 px-6 overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
-        {/* Left Content */}
-        <div className="z-10">
-          <h4 className="text-gray-800 font-semibold text-lg mb-3 relative inline-block">
-            About Ayfiz
-            <span className="block w-10 h-[2px] bg-red-500 mt-1"></span>
-          </h4>
+        {/* Right Image Section - Now first on Mobile/Tablet */}
+        <div className="relative flex justify-center items-center order-1 lg:order-2">
+          {/* Left Blue Triangle */}
+          <div 
+            className="absolute -left-4 lg:-left-6 top-10 bottom-10 w-3 lg:w-4 bg-[#2a4d95]" 
+            style={{ clipPath: 'polygon(100% 0, 0 50%, 100% 100%)' }}
+          ></div>
 
-          <h1 className="text-3xl md:text-4xl font-semibold text-gray-800 leading-snug mb-4">
+          {/* The Main Image */}
+          <div className="w-full h-[300px] md:h-[450px] overflow-hidden shadow-2xl">
+            <img
+              src={TeamImage}
+              alt="Team working"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Right Blue Triangle */}
+          <div 
+            className="absolute -right-4 lg:-right-6 top-0 bottom-0 w-3 lg:w-4 bg-[#2a4d95]" 
+            style={{ clipPath: 'polygon(0 0, 100% 50%, 0 100%)' }}
+          ></div>
+        </div>
+
+        {/* Left Content - Now second on Mobile/Tablet */}
+        <div className="relative z-10 order-2 lg:order-1">
+          <div className="mb-6 lg:mb-8">
+            <h2 className="text-[#1a2b56] font-bold text-2xl lg:text-3xl mb-2 font-serif">
+              About Ayfiz
+            </h2>
+            <div className="w-12 h-[3px] bg-red-400"></div>
+          </div>
+
+          <h3 className="text-[#4a69a7] text-3xl lg:text-4xl font-medium leading-tight mb-6 lg:mb-8 font-serif max-w-md">
             Lorem Ipsum has been the industry's standard
-          </h1>
+          </h3>
 
-          <p className="text-gray-600 mb-3 max-w-md">
-            Lorem Ipsum has been the industry's standard dummy text ever since
-            the 1500s, when an unknown
-          </p>
+          <div className="space-y-4 lg:space-y-6 text-gray-600 text-sm md:text-base max-w-lg">
+            <p>
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+            </p>
+            <p>
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+            </p>
+          </div>
 
-          <p className="text-gray-600 mb-6 max-w-md">
-            Lorem Ipsum has been the industry's standard dummy text ever since
-            the 1500s, when an unknown
-          </p>
-
-          <div className="flex flex-wrap gap-4">
-            <button className="bg-blue-700 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition">
+          <div className="flex flex-col sm:flex-row gap-4 mt-8 lg:mt-10">
+            <button className="bg-[#2a4d95] text-white px-10 py-3 rounded-2xl hover:bg-[#1e3a75] transition-all font-bold text-sm text-center">
               Lorem Ipsum Has
             </button>
-
-            <button className="border border-blue-700 text-blue-700 px-6 py-2 rounded-full hover:bg-blue-50 transition">
+            <button className="border-2 border-[#2a4d95] text-[#2a4d95] px-10 py-3 rounded-2xl hover:bg-blue-50 transition-all font-bold text-sm text-center">
               Lorem has Bee
             </button>
           </div>
         </div>
 
-        {/* Right Shape */}
-        <div className="relative flex justify-center lg:justify-end">
-          <div className="absolute right-[-150px] lg:right-[-200px] w-[420px] h-[420px] md:w-[520px] md:h-[520px] bg-blue-800 rounded-full flex items-center justify-center">
-            <div className="text-white text-center">
-              <div className="text-2xl font-semibold tracking-wider">
-                AYFIZ
-              </div>
-              <div className="text-sm tracking-[4px] opacity-80">
-                ABSOLUTES
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -6,24 +6,21 @@ const WhatWeOffer = () => {
   const services = [
     {
       title: "IT",
-      image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
     },
     {
       title: "TRADING",
-      image:
-        "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
+      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
     },
     {
       title: "MEDIA",
-      image:
-        "https://images.unsplash.com/photo-1542038784456-1ea8e935640e",
+      image: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e",
     },
   ];
 
   return (
     <section className="py-16 max-w-7xl mx-auto px-6">
-      <h2 className="text-4xl font-bold text-center mb-12">
+      <h2 className="text-4xl font-semibold text-center mb-12 text-primary-dark font-playfair">
         What we Offers?
       </h2>
 
@@ -45,10 +42,22 @@ const WhatWeOffer = () => {
             <div className="absolute inset-0 bg-blue-900/50" />
 
             {/* Title */}
-            <div className="absolute inset-0 flex items-center justify-center">
+            {/* Title */}
+            <div
+              className={`absolute inset-0 flex px-6
+  ${
+    active === index
+      ? "items-center justify-center"
+      : index === 0
+        ? "items-start justify-center pt-10"
+        : index === 1
+          ? "items-center justify-center"
+          : "items-end justify-center pb-10"
+  }`}
+            >
               <h3
                 className={`text-white font-bold tracking-wider transition-all duration-300
-                ${active === index ? "text-4xl" : "text-2xl"}`}
+    ${active === index ? "text-4xl" : "text-2xl"}`}
               >
                 {service.title}
               </h3>

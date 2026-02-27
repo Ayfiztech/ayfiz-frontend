@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
 import LogoBlue from "../../assets/images/header-blue.png";
@@ -8,6 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -16,24 +17,34 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
   const isOffersActive = ["/offers", "/BrandDetail", "/MediaDetail", "/TradingDetail"].includes(location.pathname);
 
+  // 🔥 Scroll Effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 80); // change after 80px scroll
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const linkClass = (path) =>
-    isHome
+    isHome && !scrolled
       ? `transition ${isActive(path) ? "text-white font-semibold" : "text-white/90 hover:text-white"}`
       : `${isActive(path) ? "text-[#4F5665] font-semibold" : "text-[#02002E] hover:text-blue-700"}`;
 
   return (
     <nav
       className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 
-      ${isHome ? "bg-transparent" : "bg-white shadow-md"}`}
+      ${isHome && !scrolled ? "bg-transparent" : "bg-white shadow-md"}`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center h-20">
 
         {/* Logo */}
         <Link to="/" className="flex-shrink-0">
           <img
-            src={isHome ? LogoWhite : LogoBlue}
+            src={isHome && !scrolled ? LogoWhite : LogoBlue}
             alt="Logo"
-           className="h-24 md:h-18 lg:h-24 w-auto object-contain mt-2"
+            className="h-24 md:h-18 lg:h-24 w-auto object-contain mt-2"
           />
         </Link>
 
@@ -54,7 +65,7 @@ const Navbar = () => {
               onClick={() => navigate("/offers")}
               className={`flex items-center gap-1 transition-colors 
               ${
-                isHome
+                isHome && !scrolled
                   ? "text-white hover:text-white"
                   : isOffersActive
                   ? "text-[#4F5665] font-semibold"
@@ -86,7 +97,7 @@ const Navbar = () => {
             to="/contact"
             className={`px-4 lg:px-6 py-2 rounded-sm font-semibold whitespace-nowrap transition-all
             ${
-              isHome
+              isHome && !scrolled
                 ? "bg-white text-black hover:bg-gray-200"
                 : "bg-[#2b4cbd] text-white hover:bg-blue-800"
             }`}
@@ -99,7 +110,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={isHome ? "text-white p-2" : "text-[#02002E] p-2"}
+            className={isHome && !scrolled ? "text-white p-2" : "text-[#02002E] p-2"}
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>

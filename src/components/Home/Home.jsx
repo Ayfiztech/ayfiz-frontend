@@ -9,13 +9,12 @@ import WhatWeOffer from "./WhatWeOffer";
 const Home = () => {
   return (
     <>
-    <HeroSection/>
+      <HeroSection />
       <WhatWeOffer />
       <AboutAyfiz />
-        <CompanyList />
+      <CompanyList />
       <TrendingNews />
       <Blog />
-    
       <IdeaForm />
     </>
   );
