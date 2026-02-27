@@ -36,19 +36,19 @@ const BenefitCard = ({ icon: Icon, title }) => (
 
 const BenefitsGrid = () => {
   const benefitsData = [
-    { icon: MdOutlineAccessTime, title: "Flexible working hours" },
-    { icon: MdOutlineFitnessCenter, title: "Sport compensation" },
-    { icon: MdOutlineSecurity, title: "Health care Insurance" },
-    { icon: IoHeartOutline, title: "Marriage bonus" },
-    { icon: IoColorWandOutline, title: "Fun team events" },
-    { icon: IoRocketOutline, title: "Professional grow budget" },
-    { icon: IoCalendarOutline, title: "30 days paid vacation" },
-    { icon: IoWalletOutline, title: "Competitive salary" },
-    { icon: IoGlassesOutline, title: "Compensation for eyeglasses" },
-    { icon: MdOutlineSchool, title: "Allowance for first-graders" },
-    { icon: MdOutlineRedeem, title: "Childbirth allowance" },
-    { icon: IoPeopleOutline, title: "Employee referral bonus" },
-    { icon: MdOutlineCelebration, title: "Birthdays celebration" },
+    { icon: MdOutlineAccessTime, title: "Work Your Way" },
+    { icon: MdOutlineFitnessCenter, title: "Stay Active, On Us" },
+    { icon: MdOutlineSecurity, title: "Health Comes First" },
+    { icon: IoHeartOutline, title: "Life Happens. We Celebrate It" },
+    { icon: IoColorWandOutline, title: "We Know How to Have Fun " },
+    { icon: IoRocketOutline, title: "Grow on Our Budget " },
+    { icon: IoCalendarOutline, title: "Take 30. We're Serious" },
+    { icon: IoWalletOutline, title: "Pay That Respects Your Work" },
+    { icon: IoGlassesOutline, title: "Screen Life is Real" },
+    { icon: MdOutlineSchool, title: "Refer Great People, Get Rewarded" },
+    { icon: MdOutlineRedeem, title: "Your Birthday is a Big Deal Here " },
+    { icon: IoPeopleOutline, title: "End of Year, You Get Rewarded " },
+    { icon: MdOutlineCelebration, title: "Work From Anywhere" },
   ];
 
   return (

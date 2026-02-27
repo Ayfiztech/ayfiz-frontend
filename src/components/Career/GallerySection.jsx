@@ -7,7 +7,7 @@ const GallerySection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <h2 className="text-4xl md:text-5xl font-serif text-center mb-16">
-          Take a peep at what goes on at Ayfiz!
+          Candid. Unfiltered. Just another day at Ayfiz.
         </h2>
 
         {/* Bento Grid Layout */}

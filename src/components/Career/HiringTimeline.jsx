@@ -4,44 +4,44 @@ import job from "../../assets/images/jobbg.png"
 const steps = [
   {
     id: "01",
-    title: "Find a role that suits you",
-    desc: "Discover open positions and find your desired one in the Visioncraft website, job listings or social media.",
+    title: "Find a Role That Suits You",
+    desc: "Browse our open positions below, on job boards, or follow us on social. Find the role that makes you think 'that's exactly what I should be doing'.",
     side: "right",
   },
   {
     id: "02",
-    title: "Send your application",
-    desc: "Some simple questions should be answered and your contact information is required.",
+    title: "Send Your Application",
+    desc: "No 47-page forms. Answer a few honest questions, tell us who you are, and hit send. We promise a real human reads it.",
     side: "left",
   },
   {
     id: "03",
-    title: "Receive your interview invite",
-    desc: "We review all applications within 3 working days and send invitation to candidates.",
+    title: "Receive Your Interview Invite",
+    desc: "We review every application within 3 working days. If there's a fit, you'll hear from us fast. We respect your time.",
     side: "right",
   },
   {
     id: "04",
-    title: "Choose an interview slot",
-    desc: "You will have a friendly discussion with the CEO and your supervisor to talk about the work, life and etc.",
+    title: "Choose Your Interview Slot",
+    desc: "Pick a time that works for you. This is a conversation — not an interrogation. We want to talk about the work, the life, and everything in between.",
     side: "left",
   },
   {
     id: "05",
-    title: "Preliminary interview",
-    desc: "Sometimes, we ask candidates to participate in some technical challenge that is designated to demonstrate candidates' proficiency.",
+    title: "Preliminary Interview",
+    desc: "A friendly, honest chat with the CEO and your future supervisor. No trick questions. No performance. Just two people figuring out if this is the right match.",
     side: "right",
   },
   {
     id: "06",
-    title: "Meet the your teammates",
-    desc: "To us is crucial to make sure all team members feel comfortable. It is why we do try to have diverse but culturally fitted team members.",
+    title: "Meet Your Teammates",
+    desc: "Sometimes we'll invite you to take on a small technical challenge — not to test you, but to give you a real taste of the kind of work you'd be doing. Consider it a preview.",
     side: "left",
   },
   {
     id: "07",
-    title: "Meet With Higher Officials",
-    desc: "Your colleagues are waiting for you to say a warm welcome.",
+    title: "Start a New Journey",
+    desc: "Welcome to the team, Ayfizian. Your colleagues are ready. Your desk is waiting. And the work that's been waiting for someone exactly like you — it's yours now",
     side: "right",
   },
 ];
@@ -82,7 +82,7 @@ const HiringTimeline = () => {
 
       <div className="max-w-4xl mx-auto text-center mb-20 mt-12 relative z-10">
         <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#2D3154] mb-6">
-          How to become a Ayfizian?
+          How to Become a Ayfizian?
         </h2>
         <p className="text-gray-500 max-w-2xl mx-auto">
           Joining us couldn't be easier! Check out our application process down
