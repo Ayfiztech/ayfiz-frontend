@@ -24,23 +24,23 @@ const CultureCard = ({ image, title, description }) => (
 const WhyWorkWithUs = () => {
   const cultureData = [
     {
-      title: "Company Values",
-      description: "Trust, learning, honesty, and co-operation are the pillars that sit at the core of what we do.",
+      title: "No Hidden Agendas",
+      description: "Real conversations. Real people. What you see is what you get.",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=500"
     },
     {
-      title: "Friendly atmosphere",
-      description: "We hold a positive attitude in order to foster respect and decency for our entire team.",
+      title: "Good Vibes, Every Day",
+      description: "We spend a lot of time together — so we made sure it's actually enjoyable.",
       image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=500"
     },
     {
-      title: "Work-life balance",
-      description: "For us, a healthy personal life is just as important as the time you spend in the office.",
+      title: "Log Off. Mean It",
+      description: "Work hard, switch off harder. Your time is yours and we respect that.",
       image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=500"
     },
     {
-      title: "Everyday grow",
-      description: "We provide the necessary support to ensure your skills never stop growing.",
+      title: "Grow Without a Ceiling",
+      description: "New skills, new challenges, new you. We invest in your growth like it's our own.",
       image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=500"
     }
   ];

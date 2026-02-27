@@ -73,10 +73,7 @@ const JoinTeamSection = () => {
             Join the team
           </h2>
           <p className="text-gray-600 leading-relaxed max-w-md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+           You've been in jobs that almost fit. Teams that almost got it. Companies that almost had the culture. At Ayfiz, almost isn't in our vocabulary. We're building something real — across industries, across borders and we're looking for the people who've been waiting for a place that actually matches their ambition. This is it.
           </p>
           <button className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 group">
             Open positions

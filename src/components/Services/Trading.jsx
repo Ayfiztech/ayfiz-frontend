@@ -44,9 +44,9 @@ const Trading = () => {
             variants={slideDown}
           >
            <ServiceCard
-              label="We Offer ----"
+              label="What We Do ----"
               title="Trading"
-              description="We will review your Business Activity and its revenue generation model, conduct identity and credit checks, and assess your business funding needs based on the information you provided to us. We will conduct an affordability check for your business to ensure that your business is able to meet up with our funding cost."
+              description="Every great business needs things to move. Products, materials, goods, opportunities — none of it happens without the right people, the right relationships, and the right knowledge of how the world actually works."
               buttonText="View More"
                 onClick={() => navigate("/TradingDetail")}
             />

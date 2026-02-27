@@ -4,7 +4,7 @@ import CareerImage from "../../assets/images/Offer.png";
 const ServicesBanner = () => {
   return (
     <>
-      <Banner title="What we Offer" bgImage={CareerImage} breadcrumb="Offer" />
+      <Banner title="What we Offer" bgImage={CareerImage} breadcrumb="Services" />
     </>
   );
 };

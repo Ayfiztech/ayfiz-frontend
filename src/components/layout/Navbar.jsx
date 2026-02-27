@@ -42,9 +42,9 @@ const Navbar = () => {
 
             {dropdownOpen && (
               <div className="absolute top-full left-0 bg-white text-gray-800 shadow-xl rounded-lg w-48 py-2 border border-gray-100">
-                <Link to="/BrandDetail" className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Branding Page</Link>
-                <Link to="/TradingDetail" className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Trading Page</Link>
-                <Link to="/MediaDetail" className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Media Page</Link>
+                <Link to="/BrandDetail" className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">IT/ITES</Link>
+                <Link to="/TradingDetail" className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Trading</Link>
+                <Link to="/MediaDetail" className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Ayfiz Brand Studio</Link>
               </div>
             )}
           </div>

@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 import { FaLinkedin, FaQuoteLeft } from 'react-icons/fa';
+import nimalImage from '../../assets/images/nimal.jpeg';
 
 const testimonials = [
   {
-    name: "James Olson",
-    role: "Product Designer",
-    quote: "I do admire the company culture and, I like that. Visioncraft is truly the place where good attitudes have blended with proficiency. If you're going to craft something great and you have a strong eagerness to do that, Visioncraft will remove all hassles in your journey.",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=500",
+    name: "Nimal Raj",
+    role: " Creative Head",
+    quote: "I've worked at places where talent goes to disappear. Ayfiz is the opposite. This is where good ideas find room to breathe. The culture is real, the people are genuinely brilliant, and somehow — every Monday still feels like an opportunity. I didn't expect that. It surprised me. It still does.",
+    image: nimalImage,
     sideImages: [
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200"
@@ -61,7 +62,7 @@ const TestimonialSection = () => {
               <div>
                 <h4 className="text-xl font-bold text-gray-900">{current.name}</h4>
                 <p className="text-gray-500 mb-4">{current.role}</p>
-                <a href="#" className="flex items-center gap-2  text-sm hover:underline">
+                <a href="https://www.linkedin.com/in/nimalrajr/" className="flex items-center gap-2  text-sm hover:underline">
                   <FaLinkedin  className='text-primary'/> LinkedIn profile
                 </a>
               </div>

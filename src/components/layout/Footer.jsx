@@ -23,8 +23,7 @@ const Footer = () => {
             />
 
             <p className="text-sm leading-relaxed mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              We look forward to creating and presenting unique ideas, solutions, and experiences that make a difference.
             </p>
 
             <div className="flex gap-3">
@@ -47,12 +46,11 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4">SOME US</h3>
 
             <ul className="space-y-2 text-sm">
-              <li className="hover:text-white cursor-pointer">Many</li>
-              <li className="hover:text-white cursor-pointer">Some Us</li>
-              <li className="hover:text-white cursor-pointer">Therefore</li>
-              <li className="hover:text-white cursor-pointer">Always is</li>
-              <li className="hover:text-white cursor-pointer">Doloremque</li>
-              <li className="hover:text-white cursor-pointer">Interne</li>
+              <li className="hover:text-white cursor-pointer">Privacy Policy</li>
+              <li className="hover:text-white cursor-pointer">Terms of Service</li>
+              <li className="hover:text-white cursor-pointer">IT/ITES</li>
+              <li className="hover:text-white cursor-pointer">Ayfiz Brand Studio</li>
+              <li className="hover:text-white cursor-pointer">Trading</li>          
             </ul>
           </div>
 
@@ -64,16 +62,16 @@ const Footer = () => {
               <div className="flex gap-3">
                 <FaMapMarkerAlt className="mt-1 text-blue-400" />
                 <div>
-                  <p>Lorem ipsum</p>
-                  <p>Lorem Ipsum Lorem 1234</p>
+                  <p>Unit 3A1 third floor Carnival Infopark phase 2</p>
+                  <p>Infopark Campus Kochi India-682042</p>
                 </div>
               </div>
 
               <div className="flex gap-3">
                 <FaPhoneAlt className="mt-1 text-blue-400" />
                 <div>
-                  <p>Xxxxxxxx</p>
-                  <p>123.456.7890</p>
+                  <p>+91 484 4533062</p>                  
+                  <p>+91 9895127233</p>
                 </div>
               </div>
 
@@ -81,7 +79,7 @@ const Footer = () => {
                 <FaPaperPlane className="mt-1 text-blue-400" />
                 <div>
                   <p>Mail Us</p>
-                  <p>info@xxxx.com</p>
+                  <p>info@ayfiz.com</p>
                 </div>
               </div>
             </div>
@@ -89,7 +87,7 @@ const Footer = () => {
 
           {/* NEWSLETTER */}
           <div>
-            <h3 className="text-white font-semibold mb-4">XXXXXX</h3>
+            <h3 className="text-white font-semibold mb-4">Subscribe to our newsletter</h3>
 
             <div className="flex border border-gray-500 rounded overflow-hidden mb-4">
               <input
@@ -104,15 +102,14 @@ const Footer = () => {
             </div>
 
             <p className="text-sm">
-              Lorem ipsum dolor sit amet, consectetur elit,
+              Subscribe to our newsletter for updates and offers, we won't spam you.
             </p>
           </div>
         </div>
 
         {/* Divider */}
         <div className="border-t border-gray-600 mt-10 pt-4 text-center text-xs text-gray-400">
-          Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do
-          Eiusmod Tempor Incididu
+           © All Copyright 2026 by Ayfiz Solutions. Designed by Ayfiz Team. Powered by Ayfiz Solutions.
         </div>
       </div>
     </footer>

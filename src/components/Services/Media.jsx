@@ -27,9 +27,9 @@ const Media = () => {
             variants={fadeInLeft}
           >
             <ServiceCard
-              label="We Offer ----"
+              label="What We Do ----"
               title="Media"
-              description="We will review your Business Activity and its revenue generation model, conduct identity and credit checks, and assess your business funding needs based on the information you provided to us. We will conduct an affordability check for your business to ensure that your business is able to meet up with our funding cost."
+              description="Most businesses have something worth saying. Very few know how to say it in a way that makes people stop, listen, and actually care."
               buttonText="View More"
                onClick={() => navigate("/MediaDetail")}
             />
