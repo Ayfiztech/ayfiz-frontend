@@ -12,7 +12,7 @@ const ContactCTA = () => {
       />
 
       <div className="relative z-10 max-w-3xl mx-auto text-center">
-        <h2 className="text-white text-5xl md:text-6xl italic mb-6 font-playfair">
+        <h2 className="text-white text-5xl md:text-6xl  mb-6 font-playfair">
           You have a story worth telling. Let's make sure the world hears it.
         </h2>
 
