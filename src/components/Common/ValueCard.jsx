@@ -13,7 +13,7 @@ const ValueCard = ({ number, title, subtitle, Icon, color = "border-gray-400", t
       </div>
       
       {/* Main Title */}
-      <h3 className="text-gray-800 text-2xl font-extrabold leading-tight font-serif mt-2">
+      <h3 className="text-gray-800 text-3xl font-extrabold leading-tight font-serif mt-2">
         {title}
       </h3>
       

@@ -59,11 +59,11 @@ const HeroGridSection = () => {
 
       {/* 3. Floating Avatar Overlays (Positioned relative to text) */}
       <div className="absolute inset-0 z-40 pointer-events-none">
-        {/* Pink Floating Circle - Positioned near the start of the text */}
+    
         <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-[18%] left-[22%] w-16 h-16 md:w-24 md:h-24 rounded-full border-[6px] border-[#e99da2] overflow-hidden shadow-2xl"
+          className="absolute top-[18%] left-[22%] w-16 h-16 md:w-24 md:h-24 rounded-full border-[6px] border-[#1111af] overflow-hidden shadow-2xl"
         >
           <img
             src="https://i.pravatar.cc/150?u=pink"
