@@ -1,32 +1,58 @@
-import bgImg3 from "../../assets/images/cont3.png";
+import { useEffect, useState } from "react";
 import LocationCard from "../Common/LocationCard";
-import bgImg2 from "../../assets/images/cont2.png";
-import bgImg1 from "../../assets/images/cont1.png";
 
-const locations = [
-  {
-    image: bgImg3,
-    title: "Ernakulam",
-    description: "This is the address",
-    address: "Ernakulam, Kerala",
-    mapUrl: "https://www.google.com/maps?q=Ernakulam",
-  },
-  {
-    image: bgImg2,
-    title: "Delhi",
-    description: "Main Office Location",
-    address: "Kochi, Kerala",
-    mapUrl: "https://www.google.com/maps?q=Kochi",
-  },
-  {
-    image: bgImg1,
-    title: "TJammu and Kashmir",
-    description: "Jammu and Kashmir",
-    address: "Trivandrum, Kerala",
-    mapUrl: "https://www.google.com/maps?q=Trivandrum",
-  },
-];
+const API_BASE = import.meta.env.VITE_API_URL || "http://localhost/ayfiz";
+
 const LocationRow = () => {
+  const [locations, setLocations] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchLocations = async () => {
+      try {
+        const res = await fetch(`${API_BASE}/api/locations`);
+        if (!res.ok) throw new Error("Failed to load locations");
+        const data = await res.json();
+        setLocations(data.locations || []);
+      } catch (err) {
+        setError(err.message);
+        setLocations([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchLocations();
+  }, []);
+
+  const imageUrl = (path) =>
+    path ? `${API_BASE}/storage/app/public/${path}` : null;
+
+  const formatAddress = (loc) => {
+    const parts = [loc.address, loc.city, loc.state_region, loc.country, loc.postal_code].filter(Boolean);
+    return parts.join(", ") || loc.address || "";
+  };
+
+  const mapUrl = (loc) => {
+    return loc.map_url ? loc.map_url : null;
+  };
+
+  if (loading) {
+    return (
+      <div className="p-6 flex justify-center items-center min-h-[200px]">
+        <p className="text-gray-500">Loading locations...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="p-6 flex justify-center items-center min-h-[200px]">
+        <p className="text-red-500">{error}</p>
+      </div>
+    );
+  }
+
   return (
     <div className="p-6">
       <div
@@ -35,14 +61,14 @@ const LocationRow = () => {
                       sm:grid-cols-2 
                       lg:grid-cols-3"
       >
-        {locations.map((item, index) => (
+        {locations.map((item) => (
           <LocationCard
-            key={index}
-            image={item.image}
-            title={item.title}
-            description={item.description}
-            address={item.address}
-            mapUrl={item.mapUrl}
+            key={item.location_id}
+            image={imageUrl(item.image)}
+            title={item.name}
+            description={item.opening_hours || ""}
+            address={formatAddress(item)}
+            mapUrl={mapUrl(item)}
           />
         ))}
       </div>
