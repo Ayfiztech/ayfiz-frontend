@@ -44,12 +44,11 @@ const HeroSection = () => {
               </p>
 
               <h2 className="mt-2 text-2xl md:text-4xl font-bold text-primary-dark font-playfair">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                You have a story worth telling. Let's make sure the world hears it.
               </h2>
 
               <p className="mt-4 text-sm md:text-base text-white leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit.
+                Media that moves people — and moves businesses forward.
               </p>
 
               <button

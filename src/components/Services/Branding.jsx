@@ -27,9 +27,9 @@ const Branding = () => {
             variants={fadeInLeft}
           >
             <ServiceCard
-              label="We Offer ----"
-              title="Branding"
-              description="We will review your Business Activity and its revenue generation model, conduct identity and credit checks, and assess your business funding needs based on the information you provided to us. We will conduct an affordability check for your business to ensure that your business is able to meet up with our funding cost."
+              label="What We Do ----"
+              title="IT/ITES"
+              description="Here's the truth most tech companies won't tell you: the problem was never the technology. It was the people implementing it."
               buttonText="View More"
              onClick={() => navigate("/BrandDetail")}
             />
