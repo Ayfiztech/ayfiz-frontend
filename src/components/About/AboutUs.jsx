@@ -32,20 +32,15 @@ const AboutSection = () => {
 
                     <div className="space-y-6 text-gray-500 leading-relaxed max-w-md">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect.
+                           The world doesn't need another company that does one thing. It needs one that handles everything — and actually means it.
                         </p>
                         <p className="font-medium text-gray-700 italic">
-                            "There has to be a better way to work - that's why we created."
+                            "There has to be a better way to work — so we built it."
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit.
+                           Ayfiz Absolutes is a holding company built for the way business really works. Not in neat categories. Not in clean departments. But in the messy, fast-moving, always-changing reality where opportunities don't wait and problems don't schedule themselves..
                         </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet
-                            cszv, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipisci.
-                        </p>
+                        
                     </div>
                 </div>
 
@@ -58,9 +53,9 @@ const AboutSection = () => {
                     {/* Or keep it higher if you want the logo BEHIND the card but over the dots */}
                     <div className="relative z-10 bg-white p-8 md:p-16 shadow-2xl rounded-sm border border-gray-50 max-w-xl">
                         <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">
-                            <span className="text-blue-800">Lorem ipsum dolor sit amet,</span>
+                            <span className="text-blue-800">Ready to be part of something bigger,</span>
                             <br />
-                            <span className="text-gray-900">consectetur adipiscing elit</span>
+                            <span className="text-gray-900">than a job title?</span>
                         </h2>
 
                         {/* Side Accent */}

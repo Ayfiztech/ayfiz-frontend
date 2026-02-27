@@ -105,9 +105,9 @@ const HeroGridSection = () => {
             variants={textVariants}
             className="text-white text-3xl md:text-4xl lg:text-6xl font-semibold -mt-6 px-6 leading-[1.1] tracking-tight"
           >
-            Lorem ipsum dolor <br />
-            sit amet, adipiscing <br />
-            elit..
+            Great companies are  <br />
+             built by people  <br />
+           who mean it..
           </motion.h1>
         </motion.div>
       </div>

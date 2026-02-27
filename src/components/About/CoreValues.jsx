@@ -9,7 +9,7 @@ const valuesData = [
   // Column 1
   { 
     number: "01", 
-    title: "Deliver the best customer experience", 
+    title: "Deliver the Best Customer Experience", 
     subtitle: "(#BEATEXTS)", 
     color: "border-purple-400", 
     textColor: "text-purple-400", 
@@ -18,7 +18,7 @@ const valuesData = [
   },
   { 
     number: "02", 
-    title: "Embrace hard work", 
+    title: "Embrace Hard Work", 
     subtitle: "(#HARDWORK)", 
     color: "border-blue-300", 
     textColor: "text-blue-300", 
@@ -38,8 +38,8 @@ const valuesData = [
   // Column 2
   { 
     number: "04", 
-    title: "Grow 1% every day", 
-    subtitle: "(#KEEPWRITINGBOOKS)", 
+    title: "Grow 1% Every Day", 
+    subtitle: "(#GrowthMindset)", 
     color: "border-yellow-400", 
     textColor: "text-yellow-400", 
     Icon: HiOutlineTrendingUp,
@@ -47,25 +47,25 @@ const valuesData = [
   },
   { 
     number: "05", 
-    title: "Be in the details", 
-    subtitle: "(#DETAILSMATTER)", 
+    title: "Be in the Details", 
+    subtitle: "(#DetailsMatter)", 
     color: "border-green-300", 
     textColor: "text-green-300", 
     Icon: HiOutlineSearch,
     col: 2 
   },
   { 
-    number: "06",  title: "Do hard things", subtitle: "(#RESILIENT)", color: "border-red-300", textColor: "text-red-300", Icon: HiOutlineShieldCheck, col: 2 },
+    number: "06",  title: "Do Hard Things", subtitle: "(#Resilient)", color: "border-red-300", textColor: "text-red-300", Icon: HiOutlineShieldCheck, col: 2 },
   { 
-    number: "07", title: "Be here to be exceptional", subtitle: "(#GREATNESS)", color: "border-indigo-400", textColor: "text-indigo-400", Icon: HiOutlineSparkles, col: 2 },
+    number: "07", title: "Be Here to Be Exceptional", subtitle: "(#Greatness)", color: "border-indigo-400", textColor: "text-indigo-400", Icon: HiOutlineSparkles, col: 2 },
   
   // Column 3
   { 
-    number: "08", title: "Be scrappy", subtitle: "(#SCRAPPY)", color: "border-blue-400", textColor: "text-blue-400", Icon: HiOutlineFire, col: 3 },
+    number: "08", title: "Be Scrappy", subtitle: "(#Scrappy)", color: "border-blue-400", textColor: "text-blue-400", Icon: HiOutlineFire, col: 3 },
   { 
-    number: "09", title: "Be direct", subtitle: "(#BEDIRECT)", color: "border-pink-400", textColor: "text-pink-400", Icon: HiOutlineChatAlt2, col: 3 },
+    number: "09", title: "Be Direct", subtitle: "(#BeDirect)", color: "border-pink-400", textColor: "text-pink-400", Icon: HiOutlineChatAlt2, col: 3 },
   { 
-    number: "10", title: "Be fun to work with", subtitle: "(#OPEN)", color: "border-yellow-500", textColor: "text-yellow-500", Icon: HiOutlineEmojiHappy, col: 3 },
+    number: "10", title: "Be Fun to Work With", subtitle: "(#Fun)", color: "border-yellow-500", textColor: "text-yellow-500", Icon: HiOutlineEmojiHappy, col: 3 },
 ];
 
 const CoreValues = () => {

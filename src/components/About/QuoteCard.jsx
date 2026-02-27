@@ -16,7 +16,7 @@ const QuoteCard = () => {
               Quote
             </span>
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-playfair text-white font-medium leading-tight">
-              Lorem ipsum dolor sit amet
+              Redefining the way you work Ayfiz
             </h2>
           </div>
         </div>

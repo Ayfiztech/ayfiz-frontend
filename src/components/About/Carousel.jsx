@@ -19,7 +19,7 @@ const LifeAtAyfiz = () => {
         <span className="text-primary    text-xs font-bold tracking-[0.2em] uppercase">Gallery</span>
         <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mt-2 mb-4">Life at Ayfiz.</h2>
         <p className="max-w-2xl mx-auto text-gray-500 text-sm md:text-base leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Where great people come to do the best work of their lives — and somehow still enjoy every Monday.
         </p>
         <button className="mt-8 bg-[#2d4a9f] hover:bg-[#1e3370] text-white px-8 py-3 rounded-md font-medium transition-all shadow-lg shadow-blue-200">
           Join Our Team
