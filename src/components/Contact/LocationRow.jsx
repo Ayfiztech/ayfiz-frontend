@@ -20,7 +20,7 @@ const locations = [
   },
   {
     image: bgImg1,
-    title: "TJammu and Kashmir",
+    title: "Jammu and Kashmir",
     description: "Jammu and Kashmir",
     address: "Trivandrum, Kerala",
     mapUrl: "https://www.google.com/maps?q=Trivandrum",

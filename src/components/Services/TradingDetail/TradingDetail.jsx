@@ -8,7 +8,7 @@ import ContactCTA from "./ContactCTA";
 const TradingDetail = () => {
   return (
     <>
-      <Banner title="Offers" bgImage={CareerImage} breadcrumb="Offers" />
+      <Banner title="Offer" bgImage={CareerImage} breadcrumb="Offer" />
       <OfferBlock
       subtitle="LOREM IPSUM"
       title="Trading"
