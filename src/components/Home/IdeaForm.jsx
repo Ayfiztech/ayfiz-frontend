@@ -13,11 +13,11 @@ const IdeaForm = () => {
         <div className="max-w-xl w-full">
           
           {/* Heading */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-semibold text-black leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-playfair font-semibold text-black leading-tight">
             Have an <span className="text-[#2F4B9A]">Idea?</span>
           </h1>
 
-          <p className="text-gray-500 mt-6 mb-10 leading-relaxed text-sm sm:text-base">
+          <p className="text-gray-800 mt-6 mb-10 leading-relaxed text-sm sm:text-base">
             Enim tempor eget pharetra facilisis sed maecenas adipiscing.
             Eu leo molestie vel, ornare non id blandit netus.
           </p>
