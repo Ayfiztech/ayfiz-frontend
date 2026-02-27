@@ -41,15 +41,7 @@ const BlogView = () => {
 
             <div className="mt-6 text-gray-600 text-base leading-8 space-y-4">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s. It has survived not only five
-                centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s
-                with the release of Letraset sheets. Contrary to popular belief,
-                Lorem Ipsum is not simply random text. It has roots in a piece
-                of classical Latin literature from 45 BC, making it over 2000
-                years old.
+                The IT and IT Enabled Services (ITES) sector has become the backbone of modern business operations. From startups to global enterprises, organizations are increasingly relying on technology and outsourced process support to improve efficiency, reduce costs, and deliver better customer experiences. As digital transformation accelerates across industries, IT/ITES is no longer just a support function—it is a strategic growth enabler.
               </p>
             </div>
           </>

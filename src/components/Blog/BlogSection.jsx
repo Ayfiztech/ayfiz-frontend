@@ -13,49 +13,49 @@ import im6 from "../../assets/images/blog6.jpg";
 const BlogSection = () => {
   const blogs = [
     {
-      heading: "Blog Post",
+      heading: "The Future of IT/ITES",
       label:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Driving Digital Transformation Through Technology and Service",
       date: "22 Oct 2023",
       image: im1,
       path: "/blog-view",
     },
     {
-      heading: "Blog Post",
+      heading: "Our Trading Company Do",
       label:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "The Role of Trading Companies in Today’s Global Supply Chain",
       date: "22 Oct 2023",
       image: im2,
       path: "/blog-view",
     },
     {
-      heading: "Blog Post",
+      heading: "The Rise of AI",
       label:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Artificial Intelligence (AI) is no longer a futuristic concept confined to science fiction.",
       date: "22 Oct 2023",
       image: im3,
       path: "/blog-view",
     },
     {
-      heading: "Blog Post",
+      heading: "Technological Growth",
       label:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Technology has always been the silent engine behind human progress.",
       date: "22 Oct 2023",
       image: im4,
       path: "/blog-view",
     },
     {
-      heading: "Blog Post",
+      heading: "The Irrelevancy of Humans.",
       label:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Humans once derived value from being the only beings capable of large-scale...",
       date: "22 Oct 2023",
       image: im5,
       path: "/blog-view",
     },
     {
-      heading: "Blog Post",
+      heading: "History of Trade",
       label:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Trade is one of the oldest human activities. Long before money existed",
       date: "22 Oct 2023",
       image: im6,
       path: "/blog-view",

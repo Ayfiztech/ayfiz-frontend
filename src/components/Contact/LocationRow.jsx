@@ -7,7 +7,7 @@ const locations = [
   {
     image: bgImg3,
     title: "Ernakulam",
-    description: "This is the address",
+    description: "Unit 3A1 third floor, Carnival Infopark phase 2, Infopark Campus Kochi India-682042",
     address: "Ernakulam, Kerala",
     mapUrl: "https://www.google.com/maps?q=Ernakulam",
   },
