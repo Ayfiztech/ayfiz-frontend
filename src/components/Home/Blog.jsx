@@ -7,18 +7,18 @@ import BlogCard from '../Common/BlogCard';
 const Blog = () => {
   const blogs = [
     { 
-      title: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.",
+      title: "The Future of IT/ITES",
+      desc: "Driving Digital Transformation Through Technology and Service.",
       img: blog1 
     },
     { 
-      title: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.",
+      title: "Our Trading Company Do",
+      desc: "The Role of Trading Companies in Today’s Global Supply Chain.",
       img: blog2 
     },
     { 
-      title: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.",
+      title: "The Rise of AI",
+      desc: "Artificial Intelligence (AI) is no longer a futuristic concept confined to science fiction.",
       img: blog3 
     }
   ];

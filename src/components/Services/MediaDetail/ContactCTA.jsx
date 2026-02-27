@@ -13,12 +13,11 @@ const ContactCTA = () => {
 
       <div className="relative z-10 max-w-3xl mx-auto text-center">
         <h2 className="text-white text-5xl md:text-6xl italic mb-6 font-playfair">
-          Lorem ipsum!
+          You have a story worth telling. Let's make sure the world hears it.
         </h2>
 
-        <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">          
+          Media that moves people and moves businesses forward.
         </p>
 
         <button className="bg-[#0a1229] border border-gray-700 hover:bg-[#151f3d] text-white px-8 py-3 rounded-sm flex items-center gap-3 mx-auto transition-all duration-300 group">
