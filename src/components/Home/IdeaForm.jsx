@@ -5,7 +5,13 @@ const IdeaForm = () => {
   return (
     <section className="relative w-full flex flex-col lg:flex-row overflow-hidden bg-white">
       
-      {/* RIGHT BLUE BACKGROUND (full height on desktop) */}
+      <div className="lg:hidden bg-[#2F4B9A] flex justify-center items-end pt-10">
+        <img
+          src={ill}
+          alt="Illustration"
+          className="w-[90%] object-contain"
+        />
+      </div>
       <div className="hidden lg:block absolute right-0 top-0 w-[32%] h-full bg-[#2F4B9A]" />
 
       {/* LEFT SIDE */}
@@ -22,7 +28,7 @@ const IdeaForm = () => {
             Eu leo molestie vel, ornare non id blandit netus.
           </p>
 
-          {/* FORM */}
+        
           <form className="space-y-6">
             <input
               type="text"
@@ -113,14 +119,8 @@ const IdeaForm = () => {
         />
       </div>
 
-      {/* MOBILE IMAGE (below form) */}
-      <div className="lg:hidden bg-[#2F4B9A] flex justify-center items-end pt-10">
-        <img
-          src={ill}
-          alt="Illustration"
-          className="w-[90%] object-contain"
-        />
-      </div>
+    
+     
     </section>
   );
 };
