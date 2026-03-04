@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import LogoImg from "../../assets/images/header-white.png";
-
+import backgroundImg from "../../assets/images/team collage.png"
 const HeroGridSection = () => {
   // Increased count to fill 3 rows across most screens
   const portraits = Array.from({ length: 15 });
@@ -32,34 +32,24 @@ const HeroGridSection = () => {
     <section className="relative w-full h-[70vh] min-h-[500px] overflow-hidden bg-black flex items-center">
       {/* 1. Background Grid - 5 columns, roughly 3 rows visible */}
       <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="absolute inset-0 grid grid-cols-3 md:grid-cols-5 w-full h-full"
-      >
-        {portraits.map((_, i) => (
-          <motion.div
-            key={i}
-            variants={itemVariants}
-            className="relative aspect-[4/5] md:aspect-square overflow-hidden border-[0.5px] border-white/10"
-          >
-            <img
-              // Using real-person placeholders to match the image vibe better than avatars
-              src={`https://i.pravatar.cc/400?img=${i + 10}`}
-              alt="Portrait background"
-              className="w-full h-full object-cover grayscale"
-            />
-          </motion.div>
-        ))}
-      </motion.div>
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 0.5 }}
+  transition={{ duration: 1 }}
+  className="absolute inset-0 z-0"
+>
+  <img
+    src={backgroundImg}
+    alt="Background"
+    className="w-full h-full object-cover grayscale"
+  />
+</motion.div>
 
       {/* 2. Gradient Overlay for Text Readability */}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/60 z-10" />
 
       {/* 3. Floating Avatar Overlays (Positioned relative to text) */}
       <div className="absolute inset-0 z-40 pointer-events-none">
-    
+
         <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
