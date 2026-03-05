@@ -55,6 +55,7 @@ const newsItems = [
 ];
 
 const NewsCard = ({ item }) => {
+  console.log(item)
   return (
     <div
       className={`relative rounded-xl overflow-hidden group cursor-pointer ${
@@ -65,7 +66,7 @@ const NewsCard = ({ item }) => {
     >
       {/* Background Image */}
       <img
-        src={item.image}
+        src={item.featured_image}
         alt={item.title}
         className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500"
       />
@@ -107,7 +108,8 @@ const NewsCard = ({ item }) => {
   );
 };
 
-export default function TrendingNews() {
+export default function TrendingNews({news}) {
+  console.log(news)
   return (
     <section className="w-full bg-[#0b1622] py-12 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
@@ -127,19 +129,19 @@ export default function TrendingNews() {
 
         {/* Top Large Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          {newsItems
+          {news
             .filter((item) => item.size === "large")
             .map((item) => (
-              <NewsCard key={item.id} item={item} />
+              <NewsCard key={item.post_id} item={item} />
             ))}
         </div>
 
         {/* Bottom Small Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {newsItems
+          {news
             .filter((item) => item.size === "small")
             .map((item) => (
-              <NewsCard key={item.id} item={item} />
+              <NewsCard key={item.post_id} item={item} />
             ))}
         </div>
       </div>

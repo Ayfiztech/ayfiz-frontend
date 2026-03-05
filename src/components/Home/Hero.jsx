@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 import logo from "../../assets/images/header-white.png";
 
-const HeroSection = () => {
+const HeroSection = ({youtubeVideoUrl}) => {
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black text-white">
       {/* Background Video Container */}
@@ -17,7 +17,7 @@ const HeroSection = () => {
         */}
         <iframe
           className="h-full w-[177.77vh] min-w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-          src="https://www.youtube.com/embed/dZWa4Cp8q8Y?autoplay=1&mute=1&controls=0&rel=0&loop=1&playlist=dZWa4Cp8q8Y&modestbranding=1&playsinline=1"
+          src="https://www.youtube.com/embed/WrLz-OZb1V4?autoplay=1&mute=1&controls=0&rel=0&loop=1&playlist=WrLz-OZb1V4&modestbranding=1&playsinline=1"
           title="Background Video"
           frameBorder="0"
           allow="autoplay; fullscreen"
@@ -34,11 +34,10 @@ const HeroSection = () => {
           alt="Ayfiz Absolutes"
           className="w-48 md:w-64 lg:w-80 mb-4"
         />
-
         <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold leading-tight tracking-tight -mt-8">
-          Trust <span className="text-blue-500">Growth</span>
+          Vision that <span className="text-blue-500">Moves</span>
           <br />
-          Commitment
+          Business.
         </h1>
       </div>
 

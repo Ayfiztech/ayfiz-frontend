@@ -24,8 +24,7 @@ const IdeaForm = () => {
           </h1>
 
           <p className="text-gray-800 mt-6 mb-10 leading-relaxed text-sm sm:text-base">
-            Enim tempor eget pharetra facilisis sed maecenas adipiscing.
-            Eu leo molestie vel, ornare non id blandit netus.
+            Let's build it. We turn your vision into powerful digital solutions that drive real results.
           </p>
 
         
