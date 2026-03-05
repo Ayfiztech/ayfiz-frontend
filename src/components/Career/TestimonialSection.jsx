@@ -1,34 +1,56 @@
-import React, { useState } from 'react';
-import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
-import { FaLinkedin, FaQuoteLeft } from 'react-icons/fa';
-import nimalImage from '../../assets/images/nimal.jpeg';
-
-const testimonials = [
-  {
-    name: "Nimal Raj",
-    role: " Creative Head",
-    quote: "I've worked at places where talent goes to disappear. Ayfiz is the opposite. This is where good ideas find room to breathe. The culture is real, the people are genuinely brilliant, and somehow — every Monday still feels like an opportunity. I didn't expect that. It surprised me. It still does.",
-    image: nimalImage,
-    sideImages: [
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200"
-    ]
-  },
-  // Add more testimonial objects here (up to 6)
-];
+import React, { useState, useEffect } from "react";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { FaLinkedin, FaQuoteLeft } from "react-icons/fa";
 
 const TestimonialSection = () => {
+  const [testimonials, setTestimonials] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-  };
+  // Fetch API
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const response = await fetch(
+          "https://demo.ayfiz.com/ayfiz/api/testimonials"
+        );
+        const data = await response.json();
+        setTestimonials(data.testimonials);
+      } catch (error) {
+        console.error("Error fetching testimonials:", error);
+      }
+    };
 
-  const current = testimonials[currentIndex];
+    fetchTestimonials();
+  }, []);
+
+  // 🔥 Auto rotate every 2 seconds
+  useEffect(() => {
+    if (testimonials.length === 0) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) =>
+        prev === testimonials.length - 1 ? 0 : prev + 1
+      );
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [testimonials]);
+
+  if (testimonials.length === 0) {
+    return <div className="text-center py-20">Loading testimonials...</div>;
+  }
+
+  // 🎯 Calculate indexes dynamically
+  const main = testimonials[currentIndex];
+  const side1 =
+    testimonials[(currentIndex + 1) % testimonials.length];
+  const side2 =
+    testimonials[(currentIndex + 2) % testimonials.length];
 
   return (
     <section className="bg-[#F7F9FC] py-20 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
+
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-playfair font-semibold text-primary mb-4">
@@ -39,61 +61,55 @@ const TestimonialSection = () => {
           </p>
         </div>
 
-        {/* Carousel Container */}
-        <div className="relative">
-          <div className="flex flex-col md:flex-row items-center justify-center relative z-10">
-            
-            {/* Main Featured Image */}
-            <div className="w-full md:w-1/3 z-20 shadow-2xl transform md:translate-x-12">
-              <img 
-                src={current.image} 
-                alt={current.name}
-                className="w-full h-[400px] object-cover"
-              />
-            </div>
+        <div className="flex flex-col md:flex-row items-center justify-center relative z-10">
 
-            {/* Content Card */}
-            <div className="w-full md:w-1/2 bg-white p-8 md:p-16 shadow-xl pt-12 md:pt-16 mt-[-40px] md:mt-0">
-              <FaQuoteLeft className="text-gray-200 text-4xl mb-6" />
-              <p className="text-gray-700 text-lg leading-relaxed mb-8 italic">
-                {current.quote}
+          {/* Main Image */}
+          <div className="w-full md:w-1/3 z-20 shadow-2xl transform md:translate-x-12">
+            <img
+              src={main.profile_image}
+              alt={main.client_name}
+              className="w-full h-[400px] object-cover transition-all duration-700"
+            />
+          </div>
+
+          {/* Content */}
+          <div className="w-full md:w-1/2 bg-white p-8 md:p-16 shadow-xl pt-12 md:pt-16 mt-[-40px] md:mt-0">
+            <FaQuoteLeft className="text-gray-200 text-4xl mb-6" />
+            <p className="text-gray-700 text-lg leading-relaxed mb-8 italic">
+              {main.feedback}
+            </p>
+
+            <div>
+              <h4 className="text-xl font-bold text-gray-900">
+                {main.client_name}
+              </h4>
+              <p className="text-gray-500 mb-4">
+                {main.company_name}
               </p>
-              
-              <div>
-                <h4 className="text-xl font-bold text-gray-900">{current.name}</h4>
-                <p className="text-gray-500 mb-4">{current.role}</p>
-                <a href="https://www.linkedin.com/in/nimalrajr/" className="flex items-center gap-2  text-sm hover:underline">
-                  <FaLinkedin  className='text-primary'/> LinkedIn profile
-                </a>
-              </div>
-            </div>
-
-            
-            <div className="hidden md:flex w-1/6 h-[350px] gap-1 ml-4 overflow-hidden opacity-80">
-                {current.sideImages.map((img, i) => (
-                    <img key={i} src={img} className="w-1/2 h-full object-cover grayscale hover:grayscale-0 transition-all" />
-                ))}
+              <a
+                href={main.linkedin_link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm hover:underline"
+              >
+                <FaLinkedin className="text-primary" />
+                LinkedIn profile
+              </a>
             </div>
           </div>
 
-          {/* Navigation Controls */}
-          <div className="mt-12 flex flex-col md:flex-row justify-between items-center max-w-4xl mx-auto border-t pt-8">
-            <div className="flex flex-col gap-1">
-                <span className="text-gray-400 text-sm">{currentIndex + 1}/6 Testimonials</span>
-                <div className="w-32 h-1 bg-gray-200">
-                    <div 
-                        className="h-full bg-black transition-all duration-300" 
-                        style={{ width: `${((currentIndex + 1) / 6) * 100}%` }}
-                    />
-                </div>
-            </div>
-
-            <button 
-              onClick={nextSlide}
-              className="flex items-center gap-2 text-gray-900 font-medium group hover:text-blue-600 transition-colors mt-6 md:mt-0"
-            >
-              Next <HiOutlineArrowNarrowRight className="text-2xl group-hover:translate-x-2 transition-transform" />
-            </button>
+          {/* Side Images */}
+          <div className="hidden md:flex w-1/6 h-[350px] gap-1 ml-4 overflow-hidden opacity-80">
+            <img
+              src={side1.profile_image}
+              alt={side1.client_name}
+              className="w-1/2 h-full object-cover grayscale transition-all duration-700"
+            />
+            <img
+              src={side2.profile_image}
+              alt={side2.client_name}
+              className="w-1/2 h-full object-cover grayscale transition-all duration-700"
+            />
           </div>
         </div>
       </div>

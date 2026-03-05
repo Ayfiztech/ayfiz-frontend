@@ -1,12 +1,17 @@
 import React from 'react';
 
+import background1Img from "../../assets/images/photo-1522202176988-66273c2fd55f.avif"
+import background2Img from "../../assets/images/photo-1556761175-b413da4baf72.avif"
+import background3Img from "../../assets/images/photo-1521737604893-d14cc237f11d.avif"
+import background4Img from "../../assets/images/photo-1517245386807-bb43f82c33c4.avif"
+
 
 const CultureCard = ({ image, title, description }) => (
   <div className="bg-white p-4 shadow-sm flex flex-col h-full transition-transform hover:-translate-y-1">
     <div className="aspect-[4/3] overflow-hidden mb-6">
-      <img 
-        src={image} 
-        alt={title} 
+      <img
+        src={image}
+        alt={title}
         className="w-full h-full object-cover"
       />
     </div>
@@ -26,22 +31,22 @@ const WhyWorkWithUs = () => {
     {
       title: "No Hidden Agendas",
       description: "Real conversations. Real people. What you see is what you get.",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=500"
+      image: background1Img
     },
     {
       title: "Good Vibes, Every Day",
       description: "We spend a lot of time together — so we made sure it's actually enjoyable.",
-      image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=500"
+      image: background2Img
     },
     {
       title: "Log Off. Mean It",
       description: "Work hard, switch off harder. Your time is yours and we respect that.",
-      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=500"
+      image: background3Img
     },
     {
       title: "Grow Without a Ceiling",
       description: "New skills, new challenges, new you. We invest in your growth like it's our own.",
-      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=500"
+      image: background4Img
     }
   ];
 
@@ -58,7 +63,7 @@ const WhyWorkWithUs = () => {
         {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {cultureData.map((item, index) => (
-            <CultureCard 
+            <CultureCard
               key={index}
               image={item.image}
               title={item.title}
