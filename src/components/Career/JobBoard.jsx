@@ -43,39 +43,51 @@ const JobBoard = () => {
   };
   const handleSubmit = async (e) => {
   e.preventDefault();
+
+  if (!designation || !linkedinLink) {
+    showMessage("All fields are required", "error");
+    return;
+  }
+
   setIsSubmitting(true);
 
-  try { 
-   
+  try {
     const response = await fetch(
       "https://demo.ayfiz.com/ayfiz/api/shared-linkedin",
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Accept": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify({
           designation,
-          linkedin_link:linkedinLink,
+          linkedin_link: linkedinLink,
         }),
       }
     );
 
     const data = await response.json();
 
-    if (!response.ok) {
-      throw new Error(data.message || "Server error");
+    if (response.ok) { 
+      showMessage(data.message || "Profile shared successfully!", "success");
+
+      setDesignation("");
+      setLinkedinLink("");
+
+      setTimeout(() => {
+        setIsModalOpen(false);
+      }, 2000);
+
+    } else if (response.status === 422) {
+      showMessage(data.message || "Invalid input", "error");
+    } else {
+      showMessage("Something went wrong. Please try again.", "error");
     }
 
-    showMessage("Profile shared successfully!", "success");
-    setDesignation("");
-    setLinkedinLink("");
-    setIsModalOpen(false);
-
   } catch (error) {
-    console.error(error);
-    showMessage(error.message || "Error submitting form", "error");
+    console.error("Network error:", error);
+    showMessage("Network error. Please try again.", "error");
   } finally {
     setIsSubmitting(false);
   }

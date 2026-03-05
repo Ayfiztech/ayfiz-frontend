@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -6,9 +7,65 @@ import {
   FaPhoneAlt,
   FaPaperPlane,
 } from "react-icons/fa";
+
 import { MdEmail } from "react-icons/md";
 import Logo from "../../assets/images/header-white.png";
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isError, setIsError] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const handleSubscribe = async () => {
+    if (!email) {
+      setMessage("Please enter your email.");
+      setIsError(true);
+      return;
+    }
+
+    setLoading(true);
+    setMessage("");
+
+    try {
+      const response = await fetch(
+        "https://demo.ayfiz.com/ayfiz/api/newsletter/subscribe",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({ email }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // success true
+        setMessage(data.message);
+        setIsError(false);
+        setEmail(""); // clear input
+        setTimeout(() => {
+          setMessage("");
+        }, 2000)
+      } else if (response.status === 422) {
+        // already subscribed
+        setMessage(data.message);
+        setIsError(true);
+        setTimeout(() => {
+          setMessage("");
+        }, 2000)
+      } else {
+        setMessage("Something went wrong. Please try again.");
+        setIsError(true);
+      }
+    } catch (error) {
+      setMessage("Network error. Please try again.");
+      setIsError(true);
+    }
+
+    setLoading(false);
+  };
   return (
     <footer className="bg-[#1f2430] text-gray-300 pt-14 pb-6">
       <div className="max-w-7xl mx-auto px-6">
@@ -50,7 +107,7 @@ const Footer = () => {
               <li className="hover:text-white cursor-pointer">Terms of Service</li>
               <li className="hover:text-white cursor-pointer">IT/ITES</li>
               <li className="hover:text-white cursor-pointer">Ayfiz Brand Studio</li>
-              <li className="hover:text-white cursor-pointer">Trading</li>          
+              <li className="hover:text-white cursor-pointer">Trading</li>
             </ul>
           </div>
 
@@ -70,7 +127,7 @@ const Footer = () => {
               <div className="flex gap-3">
                 <FaPhoneAlt className="mt-1 text-blue-400" />
                 <div>
-                  <p>+91 484 4533062</p>                  
+                  <p>+91 484 4533062</p>
                   <p>+91 9895127233</p>
                 </div>
               </div>
@@ -91,15 +148,31 @@ const Footer = () => {
 
             <div className="flex border border-gray-500 rounded overflow-hidden mb-4">
               <input
-                type="text"
-                placeholder="laboris nis *"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
                 className="bg-transparent px-3 py-2 w-full outline-none text-sm"
               />
 
-              <button className="bg-blue-600 px-4 flex items-center justify-center">
+              <button
+                onClick={handleSubscribe}
+                disabled={loading}
+                className="bg-blue-600 px-4 flex items-center justify-center"
+              >
                 <MdEmail className="text-white" />
               </button>
             </div>
+
+            {/*  MESSAGE DISPLAY HERE */}
+            {message && (
+              <div
+                className={`text-xs mb-1 ${isError ? "text-red-400" : "text-green-400"
+                  }`}
+              >
+                {message}
+              </div>
+            )}
 
             <p className="text-sm">
               Subscribe to our newsletter for updates and offers, we won't spam you.
@@ -108,8 +181,8 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-600 mt-10 pt-4 text-center text-xs text-gray-400">
-           © All Copyright 2026 by Ayfiz Solutions. Designed by Ayfiz Team. Powered by Ayfiz Solutions.
+        <div className="border-t border-gray-600 mt-4 pt-4 text-center text-xs text-gray-400">
+          © All Copyright 2026 by Ayfiz Solutions. Designed by Ayfiz Team. Powered by Ayfiz Solutions.
         </div>
       </div>
     </footer>
