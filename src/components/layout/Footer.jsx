@@ -28,15 +28,22 @@ const Footer = () => {
 
             <div className="flex gap-3">
               <div className="w-9 h-9 flex items-center justify-center bg-[#2d3446] rounded-full hover:bg-blue-600 cursor-pointer">
-                <FaFacebookF />
+                <a href="https://www.facebook.com/ayfizabsolutes/"
+                  target="_blank"
+                ><FaFacebookF /></a>
+
               </div>
 
               <div className="w-9 h-9 flex items-center justify-center bg-[#2d3446] rounded-full hover:bg-pink-600 cursor-pointer">
-                <FaInstagram />
+                <a href="https://www.instagram.com/ayfizabsolutes"
+                  target="_blank"
+                ><FaInstagram /></a>
               </div>
 
               <div className="w-9 h-9 flex items-center justify-center bg-[#2d3446] rounded-full hover:bg-red-600 cursor-pointer">
-                <FaYoutube />
+                <a href="https://www.youtube.com/@Ayfiz"
+                  target="_blank"
+                ><FaYoutube /></a>
               </div>
             </div>
           </div>
@@ -50,7 +57,7 @@ const Footer = () => {
               <li className="hover:text-white cursor-pointer">Terms of Service</li>
               <li className="hover:text-white cursor-pointer">IT/ITES</li>
               <li className="hover:text-white cursor-pointer">Ayfiz Brand Studio</li>
-              <li className="hover:text-white cursor-pointer">Trading</li>          
+              <li className="hover:text-white cursor-pointer">Trading</li>
             </ul>
           </div>
 
@@ -70,7 +77,7 @@ const Footer = () => {
               <div className="flex gap-3">
                 <FaPhoneAlt className="mt-1 text-blue-400" />
                 <div>
-                  <p>+91 484 4533062</p>                  
+                  <p>+91 484 4533062</p>
                   <p>+91 9895127233</p>
                 </div>
               </div>
@@ -109,7 +116,7 @@ const Footer = () => {
 
         {/* Divider */}
         <div className="border-t border-gray-600 mt-10 pt-4 text-center text-xs text-gray-400">
-           © All Copyright 2026 by Ayfiz Solutions. Designed by Ayfiz Team. Powered by Ayfiz Solutions.
+          © All Copyright 2026 by Ayfiz Solutions. Designed by Ayfiz Team. Powered by Ayfiz Solutions.
         </div>
       </div>
     </footer>

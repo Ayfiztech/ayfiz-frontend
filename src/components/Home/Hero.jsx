@@ -16,8 +16,11 @@ const HeroSection = ({youtubeVideoUrl}) => {
           YouTube video to stretch and cover the vertical screen.
         */}
         <iframe
-          className="h-full w-[177.77vh] min-w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-          src="https://www.youtube.com/embed/WrLz-OZb1V4?autoplay=1&mute=1&controls=0&rel=0&loop=1&playlist=WrLz-OZb1V4&modestbranding=1&playsinline=1"
+          className="absolute top-1/2 left-1/2
+          min-w-full min-h-full
+          w-[177.77vh] h-[56.25vw]
+          -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+          src="https://www.youtube.com/embed/SyRF8erJ5VY?autoplay=1&mute=1&loop=1&playlist=SyRF8erJ5VY"
           title="Background Video"
           frameBorder="0"
           allow="autoplay; fullscreen"
@@ -53,10 +56,10 @@ const HeroSection = ({youtubeVideoUrl}) => {
   z-30 text-lg md:text-xl
   "
       >
-        <FaTwitter className="cursor-pointer hover:text-blue-400 transition" />
-        <FaFacebookF className="cursor-pointer hover:text-blue-400 transition" />
-        <FaInstagram className="cursor-pointer hover:text-blue-400 transition" />
-        <FaLinkedinIn className="cursor-pointer hover:text-blue-400 transition" />
+        <a href=""></a> <FaTwitter className="cursor-pointer hover:text-blue-400 transition" />
+        <a href="https://www.facebook.com/ayfizabsolutes/" target="_blank"><FaFacebookF className="cursor-pointer hover:text-blue-400 transition" /></a>
+        <a href="https://www.instagram.com/ayfizabsolutes" target="_blank"><FaInstagram className="cursor-pointer hover:text-blue-400 transition" /></a>
+        <a href="https://www.linkedin.com/company/ayfiz" target="_blank"><FaLinkedinIn className="cursor-pointer hover:text-blue-400 transition" /></a>
       </div>
     </section>
   );

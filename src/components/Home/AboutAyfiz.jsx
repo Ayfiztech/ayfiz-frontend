@@ -51,10 +51,10 @@ export default function AboutAyfiz({aboutShort}) {
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8 lg:mt-10">
             <button className="bg-[#2a4d95] text-white px-10 py-3 rounded-2xl hover:bg-[#1e3a75] transition-all font-bold text-sm text-center">
-              Lorem Ipsum Has
+              Who we are
             </button>
             <button className="border-2 border-[#2a4d95] text-[#2a4d95] px-10 py-3 rounded-2xl hover:bg-blue-50 transition-all font-bold text-sm text-center">
-              Lorem has Bee
+              Reach Us
             </button>
           </div>
         </div>
