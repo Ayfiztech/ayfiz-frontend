@@ -31,7 +31,7 @@ const Media = () => {
               title="Media"
               description="Most businesses have something worth saying. Very few know how to say it in a way that makes people stop, listen, and actually care."
               buttonText="View More"
-               onClick={() => navigate("/MediaDetail")}
+               onClick={() => navigate("/media")}
             />
           </motion.div>
           <div aria-hidden="true" className="mt-10 max-sm:order-1 lg:mt-0">

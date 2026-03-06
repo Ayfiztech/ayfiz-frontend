@@ -31,7 +31,7 @@ const Branding = () => {
               title="IT/ITES"
               description="Here's the truth most tech companies won't tell you: the problem was never the technology. It was the people implementing it."
               buttonText="View More"
-             onClick={() => navigate("/BrandDetail")}
+             onClick={() => navigate("/IT")}
             />
           </motion.div>
           <div aria-hidden="true" className="mt-10 max-sm:order-1 lg:mt-0">

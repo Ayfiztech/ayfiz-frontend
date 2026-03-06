@@ -15,7 +15,7 @@ const Navbar = () => {
 
   const isHome = location.pathname === "/";
   const isActive = (path) => location.pathname === path;
-  const isOffersActive = ["/offers", "/BrandDetail", "/MediaDetail", "/TradingDetail"].includes(location.pathname);
+  const isOffersActive = ["/offers", "/IT", "/media", "/Trade"].includes(location.pathname);
 
   // 🔥 Scroll Effect
   useEffect(() => {
@@ -81,9 +81,9 @@ const Navbar = () => {
 
             {dropdownOpen && (
               <div className="absolute top-full left-0 bg-white text-gray-800 shadow-xl rounded-lg w-48 py-2 border border-gray-100">
-                <Link to="/BrandDetail" className="block px-4 py-2 hover:bg-blue-50">IT/ITES</Link>                
-                <Link to="/MediaDetail" className="block px-4 py-2 hover:bg-blue-50">Ayfiz Branding Studio</Link>
-                <Link to="/TradingDetail" className="block px-4 py-2 hover:bg-blue-50">Trading Page</Link>
+                <Link to="/IT" className="block px-4 py-2 hover:bg-blue-50">IT/ITES</Link>                
+                <Link to="/media" className="block px-4 py-2 hover:bg-blue-50">Media/Marketing</Link>
+                <Link to="/Trade" className="block px-4 py-2 hover:bg-blue-50">Trade</Link>
               </div>
             )}
           </div>
@@ -137,9 +137,9 @@ const Navbar = () => {
 
               {servicesOpen && (
                 <div className="pl-4 mt-2 flex flex-col space-y-3 border-l-2 border-blue-500 ml-1 py-2">
-                  <Link to="/BrandDetail" onClick={() => setIsOpen(false)}>Branding Page</Link>
-                  <Link to="/TradingDetail" onClick={() => setIsOpen(false)}>Trading Page</Link>
-                  <Link to="/MediaDetail" onClick={() => setIsOpen(false)}>Media Page</Link>
+                  <Link to="/IT" onClick={() => setIsOpen(false)}>Branding Page</Link>
+                  <Link to="/Trade" onClick={() => setIsOpen(false)}>Trading Page</Link>
+                  <Link to="/media" onClick={() => setIsOpen(false)}>Media Page</Link>
                 </div>
               )}
             </div>
