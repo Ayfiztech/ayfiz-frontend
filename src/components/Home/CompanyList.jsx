@@ -1,13 +1,26 @@
 import React from "react";
-import comp1 from "../../assets/images/comp1.png";
-import comp2 from "../../assets/images/comp2.png";
-import comp3 from "../../assets/images/comp3.png";
-import comp4 from "../../assets/images/comp4.png";
-import comp5 from "../../assets/images/comp5.png";
-import comp6 from "../../assets/images/comp6.png";
-
+import { useEffect, useState } from "react";
 const LogoStrip = () => {
-  const logos = [comp1, comp2, comp3, comp4, comp5, comp6];
+  const [logos, setLogos] = useState([]);
+
+  useEffect(() => {
+    const fetchPartners = async () => {
+      try {
+        const response = await fetch(
+          "https://demo.ayfiz.com/ayfiz/api/landingPageDetails"
+        );
+        const data = await response.json();
+
+        const images = data.partnerships.flatMap((item) => item.images);
+
+        setLogos(images);
+      } catch (error) {
+        console.log("Error fetching logos:", error);
+      }
+    };
+
+    fetchPartners();
+  }, []);
 
   return (
     <section className="py-12 bg-white overflow-hidden">

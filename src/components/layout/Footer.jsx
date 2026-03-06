@@ -85,15 +85,22 @@ const Footer = () => {
 
             <div className="flex gap-3">
               <div className="w-9 h-9 flex items-center justify-center bg-[#2d3446] rounded-full hover:bg-blue-600 cursor-pointer">
-                <FaFacebookF />
+                <a href="https://www.facebook.com/ayfizabsolutes/"
+                  target="_blank"
+                ><FaFacebookF /></a>
+
               </div>
 
               <div className="w-9 h-9 flex items-center justify-center bg-[#2d3446] rounded-full hover:bg-pink-600 cursor-pointer">
-                <FaInstagram />
+                <a href="https://www.instagram.com/ayfizabsolutes"
+                  target="_blank"
+                ><FaInstagram /></a>
               </div>
 
               <div className="w-9 h-9 flex items-center justify-center bg-[#2d3446] rounded-full hover:bg-red-600 cursor-pointer">
-                <FaYoutube />
+                <a href="https://www.youtube.com/@Ayfiz"
+                  target="_blank"
+                ><FaYoutube /></a>
               </div>
             </div>
           </div>

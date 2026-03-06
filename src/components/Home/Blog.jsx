@@ -1,27 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'
 import blog1 from '../../assets/images/blog1.jpg';
 import blog2 from '../../assets/images/blog2.jpg';
 import blog3 from '../../assets/images/blog3.jpg';
 import BlogCard from '../Common/BlogCard';
 
-const Blog = () => {
-  const blogs = [
-    { 
-      title: "The Future of IT/ITES",
-      desc: "Driving Digital Transformation Through Technology and Service.",
-      img: blog1 
-    },
-    { 
-      title: "Our Trading Company Do",
-      desc: "The Role of Trading Companies in Today’s Global Supply Chain.",
-      img: blog2 
-    },
-    { 
-      title: "The Rise of AI",
-      desc: "Artificial Intelligence (AI) is no longer a futuristic concept confined to science fiction.",
-      img: blog3 
-    }
-  ];
+const Blog = ({blogs}) => {
 
   return (
     <div className="bg-white">
@@ -40,7 +23,7 @@ const Blog = () => {
           {blogs.map((b, index) => (
             <BlogCard
               key={index}
-              image={b.img}
+              image={b.featured_image}
               title={b.title}
               description={b.desc}
             />
