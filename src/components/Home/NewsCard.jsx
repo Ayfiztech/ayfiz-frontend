@@ -1,9 +1,9 @@
 import React from "react";
 import { Clock, Calendar } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion"
 
 const NewsCard = ({ item }) => {
-  
   console.log(item, 'itemss')
   return (
     <div
@@ -57,6 +57,15 @@ export default function TrendingNews({ news }) {
   console.log(news, 'news')
   const largeNews = news.slice(0, 2);
   const smallNews = news.slice(2, 5);
+
+   const fadeUp = {
+    hidden: { opacity: 0, y: 60 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration:1 }
+    }
+  }
   return (
     <section className="w-full bg-[#0b1622] py-12 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
@@ -77,14 +86,18 @@ export default function TrendingNews({ news }) {
         {/* Top Large Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6" onClick={handleClick}>
           {largeNews.map((item) => (
+            <motion.section variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}>
             <NewsCard key={item.post_id} item={item} />
+            </motion.section>
           ))}
         </div>
 
         {/* Bottom Small Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" onClick={handleClick}>
           {smallNews.map((item) => (
+            <motion.section variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}>
             <NewsCard key={item.post_id} item={item} />
+            </motion.section>
           ))}
         </div>
       </div>

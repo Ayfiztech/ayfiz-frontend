@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 import logo from "../../assets/images/header-white.png";
 
-const HeroSection = ({youtubeVideoUrl}) => {
+const HeroSection = ({ youtubeVideoUrl }) => {
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black text-white">
       {/* Background Video Container */}
@@ -15,16 +15,18 @@ const HeroSection = ({youtubeVideoUrl}) => {
         {/* The 'scale-150' and 'h-[100%]' on mobile forces the 16:9 
           YouTube video to stretch and cover the vertical screen.
         */}
-        <iframe
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="absolute top-1/2 left-1/2
           min-w-full min-h-full
           w-[177.77vh] h-[56.25vw]
           -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-          src="https://www.youtube.com/embed/SyRF8erJ5VY?autoplay=1&mute=1&loop=1&playlist=SyRF8erJ5VY"
-          title="Background Video"
-          frameBorder="0"
-          allow="autoplay; fullscreen"
-        />
+        >
+          <source src="/src/assets/video/Modern_glasswalled_tech_office_with_a_collaborativ.mp4" type="video/mp4" />
+        </video>
         {/* Dark Overlay to make text pop */}
         <div className="absolute inset-0 bg-black/50" />
       </div>

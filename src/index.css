@@ -12,17 +12,18 @@
 
 
     --color-primary: #1A439A;
-    --color-primary-dark:  #02002E;
+    --color-primary-dark: #02002E;
   }
 
   body {
     font-family: "Poppins", sans-serif;
-    }
-    
+  }
+
   @keyframes scroll {
     0% {
       transform: translateX(0);
     }
+
     100% {
       transform: translateX(-50%);
     }
@@ -32,60 +33,70 @@
     animation: scroll 20s linear infinite;
   }
 
-    .loader {
-      width: 50px;
-      aspect-ratio: 1;
-      --c: no-repeat radial-gradient(farthest-side,#1A4398 92%,#0000);
-      background: 
-        var(--c) 50%  0, 
-        var(--c) 50%  100%, 
-        var(--c) 100% 50%, 
-        var(--c) 0    50%;
-      background-size: 10px 10px;
-      animation: l18 1s infinite;
-      position: relative;
-    }
-    .loader::before {
-      content:"";
-      position: absolute;
-      inset:0;
-      margin: 3px;
-      background: repeating-conic-gradient(#0000 0 35deg, #1A4398 0 90deg);
-      -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0);
-      border-radius: 50%;
-    }
-    @keyframes l18 { 
-      100%{transform: rotate(.5turn)}
-    }
+  .loader {
+    width: 50px;
+    aspect-ratio: 1;
+    --c: no-repeat radial-gradient(farthest-side, #1A4398 92%, #0000);
+    background:
+      var(--c) 50% 0,
+      var(--c) 50% 100%,
+      var(--c) 100% 50%,
+      var(--c) 0 50%;
+    background-size: 10px 10px;
+    animation: l18 1s infinite;
+    position: relative;
+  }
 
-    .custom-shadow-green-300 {
-      box-shadow: 0 4px 4px -1px rgba(1, 230, 85, 0.5), 0 2px 4px -2px rgba(1, 230, 85, 0.3); /* green-300 */
+  .loader::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: 3px;
+    background: repeating-conic-gradient(#0000 0 35deg, #1A4398 0 90deg);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 3px), #000 0);
+    border-radius: 50%;
+  }
+
+  @keyframes l18 {
+    100% {
+      transform: rotate(.5turn)
     }
-    
-    .custom-shadow-yellow-300 {
-      box-shadow: 0 4px 4px -1px rgba(216, 180, 2, 0.4), 0 2px 4px -2px rgba(253, 224, 71, 0.2); /* yellow-300 */
-    }
-    
-    .custom-shadow-pink-300 {
-      box-shadow: 0 4px 4px -1px  rgba(198, 1, 216, 0.5), 0 2px 4px -2px rgba(198, 1, 216, 0.3); /* pink-300 */
-    }
-    
-    .custom-shadow-orange-300 {
-      box-shadow: 0 4px 4px -1px rgba(251, 146, 60, 0.5), 0 2px 4px -2px rgba(251, 146, 60, 0.3); /* orange-300 */
-    }
-    
-    .custom-shadow-gray-300 {
-      box-shadow: 0 4px 4px -1px rgba(209, 213, 219, 0.5), 0 2px 4px -2px rgba(209, 213, 219, 0.3); /* gray-300 */
-    }
-    
-    .custom-shadow-red-300 {
-      box-shadow: 0 4px 4px -1px  rgba(252, 165, 165, 0.3), 0 2px 4px -2px rgba(252, 165, 165, 0.3); /* pink-300 */
-    }
-    
-    img[alt='blue-eye'] {
-      filter: invert(13%) sepia(84%) saturate(4696%) hue-rotate(211deg) brightness(93%) contrast(104%);
-    }
-    
+  }
+
+  .custom-shadow-green-300 {
+    box-shadow: 0 4px 4px -1px rgba(1, 230, 85, 0.5), 0 2px 4px -2px rgba(1, 230, 85, 0.3);
+    /* green-300 */
+  }
+
+  .custom-shadow-yellow-300 {
+    box-shadow: 0 4px 4px -1px rgba(216, 180, 2, 0.4), 0 2px 4px -2px rgba(253, 224, 71, 0.2);
+    /* yellow-300 */
+  }
+
+  .custom-shadow-pink-300 {
+    box-shadow: 0 4px 4px -1px rgba(198, 1, 216, 0.5), 0 2px 4px -2px rgba(198, 1, 216, 0.3);
+    /* pink-300 */
+  }
+
+  .custom-shadow-orange-300 {
+    box-shadow: 0 4px 4px -1px rgba(251, 146, 60, 0.5), 0 2px 4px -2px rgba(251, 146, 60, 0.3);
+    /* orange-300 */
+  }
+
+  .custom-shadow-gray-300 {
+    box-shadow: 0 4px 4px -1px rgba(209, 213, 219, 0.5), 0 2px 4px -2px rgba(209, 213, 219, 0.3);
+    /* gray-300 */
+  }
+
+  .custom-shadow-red-300 {
+    box-shadow: 0 4px 4px -1px rgba(252, 165, 165, 0.3), 0 2px 4px -2px rgba(252, 165, 165, 0.3);
+    /* pink-300 */
+  }
+
+  img[alt='blue-eye'] {
+    filter: invert(13%) sepia(84%) saturate(4696%) hue-rotate(211deg) brightness(93%) contrast(104%);
+  }
+
   /* Custom scrollbar styles */
   .custom-scrollbar {
     @apply overflow-y-auto;
@@ -122,6 +133,7 @@
 
 
   @layer utilities {
+
     .no-spinner::-webkit-outer-spin-button,
     .no-spinner::-webkit-inner-spin-button {
       @apply appearance-none;
@@ -131,4 +143,9 @@
     .no-spinner {
       -moz-appearance: textfield;
     }
+  }
+
+  #hero {
+    pointer-events: none;
+    transform: scale(1.2);
   }
