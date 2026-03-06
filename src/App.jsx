@@ -12,6 +12,8 @@ import MediaDetailPage from "./pages/MediaDetailPage";
 import TradingDetailPage from "./pages/TradingDetailPage";
 import AboutPage from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
+import WalkingScene from "./components/Common/404";
+import NotFound from "./components/Common/404";
 
 function App() {
   return (
@@ -99,10 +101,21 @@ function App() {
               </div>
             }
           />
+
+          
+           <Route
+            path="/404"
+            element={
+              <div>
+                <NotFound />
+              </div>
+            }
+          />
         </Routes>
 
        
       </>
+     
       <Footer />
       </div>
     </Router>
