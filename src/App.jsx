@@ -66,7 +66,7 @@ function App() {
             }
           />
           <Route
-            path="/blog-View"
+            path="/blog-View/:id"
             element={
               <div>
                 <BlogViewPage />

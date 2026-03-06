@@ -6,21 +6,31 @@ const LocationCard = ({
   description,
   buttonLabel = "View Location",
   address,
-  mapUrl, // google map link
+  mapUrl,
+  onSelectLocation,
+  locationId,
+  activeLocationId,
+  setActiveLocationId
 }) => {
-  const [showAddress, setShowAddress] = useState(false);
 
   const handleAddressClick = () => {
     if (mapUrl) {
       window.open(mapUrl, "_blank");
     }
   };
+ const handleViewClick = () => {
+  setActiveLocationId(locationId);
 
+  if (mapUrl && onSelectLocation) {
+    onSelectLocation(mapUrl);
+  }
+};
+const showAddress = activeLocationId === locationId;
   return (
     <div
-   className="relative w-full rounded-2xl overflow-hidden shadow-lg bg-cover bg-center transition-all duration-300 hover:scale-[1.02]" style={{
-  backgroundImage: image ? `url(${image})` : "none",
-}}
+      className="relative w-full rounded-2xl overflow-hidden shadow-lg bg-cover bg-center transition-all duration-300 hover:scale-[1.02]" style={{
+        backgroundImage: image ? `url(${image})` : "none",
+      }}
     >
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
@@ -33,21 +43,21 @@ const LocationCard = ({
         </div>
 
         {/* Button */}
-        {!showAddress ? (
-          <button
-            onClick={() => setShowAddress(true)}
-            className="mt-4 bg-blue-500 hover:bg-blue-600 transition px-6 py-2 rounded-full text-sm font-medium w-fit"
-          >
-            {buttonLabel}
-          </button>
-        ) : (
-          <div
-            onClick={handleAddressClick}
-            className="mt-4 bg-white text-black px-4 py-2 rounded-lg cursor-pointer text-sm font-semibold hover:bg-gray-200 transition"
-          >
-            {address}
-          </div>
-        )}
+       {!showAddress ? (
+  <button
+    onClick={handleViewClick}
+    className="mt-4 bg-blue-500 hover:bg-blue-600 transition px-6 py-2 rounded-full text-sm font-medium w-fit"
+  >
+    {buttonLabel}
+  </button>
+) : (
+  <div
+    onClick={handleAddressClick}
+    className="mt-4 bg-white text-black px-4 py-2 rounded-lg cursor-pointer text-sm font-semibold hover:bg-gray-200 transition"
+  >
+    {address}
+  </div>
+)}
       </div>
     </div>
   );
