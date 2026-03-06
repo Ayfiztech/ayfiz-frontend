@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ill from "../../assets/images/ill.png";
-
+import { FaWhatsapp } from "react-icons/fa";
 const IdeaForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -277,6 +277,32 @@ const IdeaForm = () => {
               {message}
             </p>
           )}
+            {/* CONTACT INFO */}
+          <div className="flex flex-wrap gap-10 mt-14 text-xs text-gray-600">
+            <div className="flex items-start gap-3">
+              <span className="text-lg">📞</span>
+              <div>
+                <p className="font-bold text-black">PHONE</p>
+                <p>+919895127233</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <span className="text-lg"><FaWhatsapp/></span>
+              <div>
+                <p className="font-bold text-black">Whatsapp</p>
+                <p>+919895127233</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <span className="text-lg">✉️</span>
+              <div>
+                <p className="font-bold text-black">EMAIL</p>
+                <p>info@ayfiz.com</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
