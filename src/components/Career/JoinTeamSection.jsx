@@ -1,68 +1,68 @@
 import React from "react";
 
-const JoinTeamSection = () => {
+const JoinTeamSection = ({ scrollToJobs }) => {
   // Mock data for the floating elements to keep the JSX clean
   const floatingElements = [
-    {
-      type: "img",
-      src: "https://i.pravatar.cc/150?u=1",
-      size: "h-8 w-8",
-      pos: "top-0 -left-4",
-    },
-    {
-      type: "dot",
-      color: "bg-green-400",
-      size: "h-2 w-2",
-      pos: "top-2 right-20",
-    },
-    {
-      type: "img",
-      src: "https://i.pravatar.cc/150?u=2",
-      size: "h-12 w-12",
-      pos: "top-4 -right-10",
-    },
-    {
-      type: "img",
-      src: "https://i.pravatar.cc/150?u=3",
-      size: "h-14 w-14",
-      pos: "top-1/3 -right-20",
-    },
-    {
-      type: "dot",
-      color: "bg-blue-300",
-      size: "h-1.5 w-1.5",
-      pos: "top-1/2 -right-4",
-    },
-    {
-      type: "dot",
-      color: "bg-black",
-      size: "h-1 w-1",
-      pos: "bottom-1/3 right-24",
-    },
-    {
-      type: "dot",
-      color: "bg-indigo-500",
-      size: "h-2 w-2",
-      pos: "bottom-1/4 -right-8",
-    },
-    {
-      type: "img",
-      src: "https://i.pravatar.cc/150?u=4",
-      size: "h-10 w-10",
-      pos: "bottom-4 -left-2",
-    },
-    {
-      type: "dot",
-      color: "bg-blue-700",
-      size: "h-3 w-3",
-      pos: "bottom-2 right-16",
-    },
-    {
-      type: "dot",
-      color: "bg-gray-400",
-      size: "h-6 w-6",
-      pos: "bottom-0 -right-12",
-    },
+    // {
+    //   type: "img",
+    //   src: "https://i.pravatar.cc/150?u=1",
+    //   size: "h-8 w-8",
+    //   pos: "top-0 -left-4",
+    // },
+    // {
+    //   type: "dot",
+    //   color: "bg-green-400",
+    //   size: "h-2 w-2",
+    //   pos: "top-2 right-20",
+    // },
+    // {
+    //   type: "img",
+    //   src: "https://i.pravatar.cc/150?u=2",
+    //   size: "h-12 w-12",
+    //   pos: "top-4 -right-10",
+    // },
+    // {
+    //   type: "img",
+    //   src: "https://i.pravatar.cc/150?u=3",
+    //   size: "h-14 w-14",
+    //   pos: "top-1/3 -right-20",
+    // },
+    // {
+    //   type: "dot",
+    //   color: "bg-blue-300",
+    //   size: "h-1.5 w-1.5",
+    //   pos: "top-1/2 -right-4",
+    // },
+      // {
+      //   type: "dot",
+      //   color: "bg-black",
+      //   size: "h-1 w-1",
+      //   pos: "bottom-1/3 right-24",
+      // },
+    // {
+    //   type: "dot",
+    //   color: "bg-indigo-500",
+    //   size: "h-2 w-2",
+    //   pos: "bottom-1/4 -right-8",
+    // },
+    // {
+    //   type: "img",
+    //   src: "https://i.pravatar.cc/150?u=4",
+    //   size: "h-10 w-10",
+    //   pos: "bottom-4 -left-2",
+    // },
+    // {
+    //   type: "dot",
+    //   color: "bg-blue-700",
+    //   size: "h-3 w-3",
+    //   pos: "bottom-2 right-16",
+    // },
+    // {
+    //   type: "dot",
+    //   color: "bg-gray-400",
+    //   size: "h-6 w-6",
+    //   pos: "bottom-0 -right-12",
+    // },
   ];
 
   return (
@@ -75,7 +75,8 @@ const JoinTeamSection = () => {
           <p className="text-gray-600 leading-relaxed max-w-md">
            You've been in jobs that almost fit. Teams that almost got it. Companies that almost had the culture. At Ayfiz, almost isn't in our vocabulary. We're building something real — across industries, across borders and we're looking for the people who've been waiting for a place that actually matches their ambition. This is it.
           </p>
-          <button className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 group">
+          <button   onClick={scrollToJobs}
+ className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 group">
             Open positions
             <svg
               className="w-4 h-4 transform group-hover:translate-y-1 transition-transform"

@@ -45,7 +45,7 @@ const LocationRow = ({ onSelectLocation }) => {
           return (
             <LocationCard
               key={item.location_id}
-              image={item.image}
+              image={item.image}  
               title={item.name}
               description={item.address}
               address={`${item.city}, ${item.state_region}`}

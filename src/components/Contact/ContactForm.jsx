@@ -127,8 +127,7 @@ const ContactForm = ({ mapUrl }) => {
           </h2>
 
           <p className="mt-3 text-gray-600 max-w-md">
-            Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo
-            molestie vel, ornare non id blandit netus.
+           Reach out to our team today and let’s discuss how we can support your business goals.  
           </p>
 
           <div className="mt-8 max-w-xl mr-2">

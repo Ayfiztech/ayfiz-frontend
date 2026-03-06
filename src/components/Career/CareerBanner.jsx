@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useRef } from "react";
 import CareerImage from "../../assets/images/career.png";
 import Banner from "../Common/Banner";
 import BenefitsGrid from "./BenefitsGrid";
@@ -12,6 +13,16 @@ import TestimonialSection from "./TestimonialSection";
 import WhyWorkWithUs from "./WhyWorkWithUs";
 
 const CareerBanner = () => {
+
+  const jobBoardRef = useRef(null);
+
+  const scrollToJobs = () => {
+    jobBoardRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   const fadeSlideDown = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -27,7 +38,9 @@ const CareerBanner = () => {
   return (
     <>
       <Banner title="Life at Ayfiz" bgImage={CareerImage} breadcrumb="Career" />
-      <JoinTeamSection />
+
+      <JoinTeamSection scrollToJobs={scrollToJobs} />
+
       <WhyWorkWithUs />
       <BenefitsGrid />
       <GallerySection />
@@ -35,9 +48,12 @@ const CareerBanner = () => {
 
       <div>
         <motion.div variants={fadeSlideDown} initial="hidden" animate="visible">
-          {" "}
           <HiringTimeline />
-          <JobBoard />
+
+          <div ref={jobBoardRef}>
+            <JobBoard />
+          </div>
+
           <BlogSection />
           <SocialFeed />
         </motion.div>
