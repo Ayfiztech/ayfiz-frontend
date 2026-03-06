@@ -115,10 +115,10 @@ const JobBoard = () => {
               {/* All Tab */}
               <button
                 onClick={() => setActiveTab("All positions")}
-                className={`w-full text-left px-4 py-3 text-sm font-medium ${activeTab === "All"
+                className={`w-full text-left px-4 py-3 text-sm font-medium ${activeTab === "All positions"
                   ? "bg-blue-50 text-blue-700 border-l-4 border-blue-700"
                   : "text-gray-600 hover:bg-gray-50"
-                  }`}
+                  }`} 
               >
                 All positions  ({careers.length})
               </button>

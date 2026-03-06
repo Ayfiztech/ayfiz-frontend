@@ -162,6 +162,7 @@ const Footer = () => {
               >
                 <MdEmail className="text-white" />
               </button>
+              
             </div>
 
             {/*  MESSAGE DISPLAY HERE */}

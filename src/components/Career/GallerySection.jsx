@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-import axios from "axios";
 
 const GallerySection = () => {
   const [images, setImages] = useState([]);

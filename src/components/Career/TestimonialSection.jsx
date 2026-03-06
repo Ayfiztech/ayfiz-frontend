@@ -6,12 +6,11 @@ const TestimonialSection = () => {
   const [testimonials, setTestimonials] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Fetch API
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
         const response = await fetch(
-          "https://demo.ayfiz.com/ayfiz/api/testimonials"
+          "https://demo.ayfiz.com/ayfiz/api/testimonials" 
         );
         const data = await response.json();
         setTestimonials(data.testimonials);
@@ -23,7 +22,7 @@ const TestimonialSection = () => {
     fetchTestimonials();
   }, []);
 
-  // 🔥 Auto rotate every 2 seconds
+  //  Auto rotate every 2 seconds
   useEffect(() => {
     if (testimonials.length === 0) return;
 
@@ -40,7 +39,7 @@ const TestimonialSection = () => {
     return <div className="text-center py-20">Loading testimonials...</div>;
   }
 
-  // 🎯 Calculate indexes dynamically
+  //  Calculate indexes dynamically
   const main = testimonials[currentIndex];
   const side1 =
     testimonials[(currentIndex + 1) % testimonials.length];
