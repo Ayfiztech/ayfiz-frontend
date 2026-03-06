@@ -1,7 +1,7 @@
 import React from "react";
 import TeamImage from "../../assets/images/team-working.png"; 
 
-export default function AboutAyfiz() {
+export default function AboutAyfiz({aboutShort}) {
   return (
     <section className="relative bg-white py-12 lg:py-20 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -40,24 +40,21 @@ export default function AboutAyfiz() {
           </div>
 
           <h3 className="text-[#4a69a7] text-3xl lg:text-4xl font-medium leading-tight mb-6 lg:mb-8 font-serif max-w-md">
-            Lorem Ipsum has been the industry's standard
+            Accelerating digital potential
           </h3>
 
           <div className="space-y-4 lg:space-y-6 text-gray-600 text-sm md:text-base max-w-lg">
             <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-            </p>
-            <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+              {aboutShort}
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8 lg:mt-10">
             <button className="bg-[#2a4d95] text-white px-10 py-3 rounded-2xl hover:bg-[#1e3a75] transition-all font-bold text-sm text-center">
-              Lorem Ipsum Has
+              Who we are
             </button>
             <button className="border-2 border-[#2a4d95] text-[#2a4d95] px-10 py-3 rounded-2xl hover:bg-blue-50 transition-all font-bold text-sm text-center">
-              Lorem has Bee
+              Reach Us
             </button>
           </div>
         </div>

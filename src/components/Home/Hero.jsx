@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 import logo from "../../assets/images/header-white.png";
 
-const HeroSection = () => {
+const HeroSection = ({ youtubeVideoUrl }) => {
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black text-white">
       {/* Background Video Container */}
@@ -15,13 +15,18 @@ const HeroSection = () => {
         {/* The 'scale-150' and 'h-[100%]' on mobile forces the 16:9 
           YouTube video to stretch and cover the vertical screen.
         */}
-        <iframe
-          className="h-full w-[177.77vh] min-w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-          src="https://www.youtube.com/embed/dZWa4Cp8q8Y?autoplay=1&mute=1&controls=0&rel=0&loop=1&playlist=dZWa4Cp8q8Y&modestbranding=1&playsinline=1"
-          title="Background Video"
-          frameBorder="0"
-          allow="autoplay; fullscreen"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute top-1/2 left-1/2
+          min-w-full min-h-full
+          w-[177.77vh] h-[56.25vw]
+          -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+        >
+          <source src="/src/assets/video/Modern_glasswalled_tech_office_with_a_collaborativ.mp4" type="video/mp4" />
+        </video>
         {/* Dark Overlay to make text pop */}
         <div className="absolute inset-0 bg-black/50" />
       </div>
@@ -34,11 +39,10 @@ const HeroSection = () => {
           alt="Ayfiz Absolutes"
           className="w-48 md:w-64 lg:w-80 mb-4"
         />
-
         <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold leading-tight tracking-tight -mt-8">
-          Trust <span className="text-blue-500">Growth</span>
+          Vision that <span className="text-blue-500">Moves</span>
           <br />
-          Commitment
+          Business.
         </h1>
       </div>
 
@@ -54,10 +58,10 @@ const HeroSection = () => {
   z-30 text-lg md:text-xl
   "
       >
-        <FaTwitter className="cursor-pointer hover:text-blue-400 transition" />
-        <FaFacebookF className="cursor-pointer hover:text-blue-400 transition" />
-        <FaInstagram className="cursor-pointer hover:text-blue-400 transition" />
-        <FaLinkedinIn className="cursor-pointer hover:text-blue-400 transition" />
+        <a href=""></a> <FaTwitter className="cursor-pointer hover:text-blue-400 transition" />
+        <a href="https://www.facebook.com/ayfizabsolutes/" target="_blank"><FaFacebookF className="cursor-pointer hover:text-blue-400 transition" /></a>
+        <a href="https://www.instagram.com/ayfizabsolutes" target="_blank"><FaInstagram className="cursor-pointer hover:text-blue-400 transition" /></a>
+        <a href="https://www.linkedin.com/company/ayfiz" target="_blank"><FaLinkedinIn className="cursor-pointer hover:text-blue-400 transition" /></a>
       </div>
     </section>
   );
