@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import it from '../../assets/images/IT-image.png';
+import trade from "../../assets/images/trade-image.png";
+import media from "../../assets/images/media-img.png";
 
 const WhatWeOffer = () => {
   const [active, setActive] = useState(1);
@@ -6,18 +9,15 @@ const WhatWeOffer = () => {
   const services = [
     {
       title: "IT",
-      image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      image: it,
     },
     {
       title: "TRADING",
-      image:
-        "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
+      image: trade,
     },
     {
       title: "MEDIA",
-      image:
-        "https://images.unsplash.com/photo-1542038784456-1ea8e935640e",
+      image: media,
     },
     // Future cards can be added here 👇
     // { title: "NEW", image: "url" },
@@ -70,7 +70,7 @@ const WhatWeOffer = () => {
             <div className="absolute inset-0 bg-blue-900/50" />
 
             {/* Title Position Logic */}
-            <div
+            <div 
               className={`absolute inset-0 flex px-6
               ${
                 active === index

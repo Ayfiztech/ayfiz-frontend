@@ -23,7 +23,7 @@ const BlogCard = ({ image, title, description }) => {
       </p>
 
       <a 
-        href="#" 
+        href="/blog" 
         className="text-blue-900 font-semibold flex items-center gap-1 hover:underline mt-auto"
       >
         → Your More
