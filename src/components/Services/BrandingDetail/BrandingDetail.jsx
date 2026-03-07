@@ -11,7 +11,7 @@ const BrandingDetail = () => {
       <Banner title="Offers" bgImage={CareerImage} breadcrumb="Offers" />
       <OfferBlock
       subtitle="What We Do"
-      title="IT/ITES"
+      title="IT & ITES"
       image={offersImage}
       paragraphs={[
         "We built our IT and ITES division specifically for businesses that are tired of technology that works against them.",

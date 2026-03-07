@@ -81,8 +81,8 @@ const Navbar = () => {
 
             {dropdownOpen && (
               <div className="absolute top-full left-0 bg-white text-gray-800 shadow-xl rounded-lg w-48 py-2 border border-gray-100">
-                <Link to="/IT" className="block px-4 py-2 hover:bg-blue-50">IT/ITES</Link>                
-                <Link to="/media" className="block px-4 py-2 hover:bg-blue-50">Media/Marketing</Link>
+                <Link to="/IT" className="block px-4 py-2 hover:bg-blue-50">IT & ITES</Link>                
+                <Link to="/media" className="block px-4 py-2 hover:bg-blue-50">Media Marketing</Link>
                 <Link to="/Trade" className="block px-4 py-2 hover:bg-blue-50">Trade</Link>
               </div>
             )}

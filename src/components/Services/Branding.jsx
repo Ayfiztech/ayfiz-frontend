@@ -28,7 +28,7 @@ const Branding = () => {
           >
             <ServiceCard
               label="What We Do ----"
-              title="IT/ITES"
+              title="IT & ITES"
               description="Here's the truth most tech companies won't tell you: the problem was never the technology. It was the people implementing it."
               buttonText="View More"
              onClick={() => navigate("/IT")}

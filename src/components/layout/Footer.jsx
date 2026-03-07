@@ -112,8 +112,8 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li className="hover:text-white cursor-pointer">Privacy Policy</li>
               <li className="hover:text-white cursor-pointer">Terms of Service</li>
-              <li className="hover:text-white cursor-pointer">IT/ITES</li>
-              <li className="hover:text-white cursor-pointer">Media/Marketing</li>
+              <li className="hover:text-white cursor-pointer">IT & ITES</li>
+              <li className="hover:text-white cursor-pointer">Media Marketing</li>
               <li className="hover:text-white cursor-pointer">Trade</li>
             </ul>
           </div>
