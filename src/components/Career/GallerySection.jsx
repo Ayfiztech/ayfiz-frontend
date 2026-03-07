@@ -27,7 +27,6 @@ const GallerySection = () => {
     fetchGallery();
   }, []);
 
-  // Static Layout Structure
   const layoutStructure = [
     { colSpan: 6, rowSpan: 3 },
     { colSpan: 3, rowSpan: 1 },
@@ -46,7 +45,6 @@ const GallerySection = () => {
     2: "md:row-span-2",
     3: "md:row-span-3",
   };
-  // Merge API images with layout
 
   const galleryItems = layoutStructure.map((layout, index) => ({
     ...layout,
@@ -76,14 +74,14 @@ const GallerySection = () => {
           ))}
 
           {/* Explore Card */}
-          <div className="md:col-span-3 md:row-span-1 bg-[#1A1A1A] p-6 flex flex-col justify-end group cursor-pointer hover:bg-[#252525] transition-colors">
+          {/* <div className="md:col-span-3 md:row-span-1 bg-[#1A1A1A] p-6 flex flex-col justify-end group cursor-pointer hover:bg-[#252525] transition-colors">
             <p className="text-gray-300 text-sm mb-2">Explore more</p>
             <HiOutlineArrowNarrowRight className="text-2xl transition-transform group-hover:translate-x-2" />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
-  );
+  );  
 };
 
 export default GallerySection;

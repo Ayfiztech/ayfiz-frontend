@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import job from "../../assets/images/jobbg.png"
 
 const steps = [
@@ -44,41 +44,98 @@ const steps = [
     desc: "Welcome to the team, Ayfizian. Your colleagues are ready. Your desk is waiting. And the work that's been waiting for someone exactly like you — it's yours now",
     side: "right",
   },
+  {
+  id: "🤝",
+  title: "Start a New Journey",
+  desc: "",
+  side: "center",
+}
 ];
 
-const Step = ({ id, title, desc, side }) => (
+const Step = React.forwardRef(({ id, title, desc, side, active, index }, ref) => (
   <div
-    className={`relative flex items-center justify-between mb-12 w-full ${side === "left" ? "flex-row-reverse" : ""}`}
-  >
+    ref={ref}
+    data-index={index}
+    className={`relative flex items-center justify-between mb-12 w-full ${
+      side === "left" ? "flex-row-reverse" : ""
+    } ${
+      side === "center" ? "flex-col text-center" : ""
+    }`}
+  > 
     {/* Text Content */}
-    <div className={`w-[45%] ${side === "left" ? "text-right" : "text-left"}`}>
+    {side !== "center" && (
+ <div className={`w-[45%] ${side === "left" ? "text-right" : "text-left"}`}>
       <h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
     </div>
+    )}
 
+{side === "center" && (
+  <p className="mt-12 font-bold text-gray-900">{title}</p>
+)}
     {/* Center Circle */}
-    <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center z-10">
+     <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center z-10">
       <div
-        className={`w-10 h-10 rounded-full bg-white border-2 flex items-center justify-center text-sm font-bold shadow-sm ${id === "01" ? "border-blue-600 text-blue-600 ring-4 ring-blue-50" : "border-gray-200 text-gray-400"}`}
-      >
+        className={`w-10 h-10 rounded-full bg-white border-2 flex items-center justify-center text-sm font-bold shadow-sm transition-all duration-300
+        ${
+          active
+            ? "border-blue-600 text-blue-600 ring-4 ring-blue-50"
+            : "border-gray-200 text-gray-400"
+        }`}
+      > 
         {id}
       </div>
     </div>
 
-    {/* Empty spacer for the other side */}
     <div className="w-[45%]" />
   </div>
-);
+));
 
 const HiringTimeline = () => {
+  const [activeStep, setActiveStep] = useState(0);
+  const stepRefs = useRef([]);
+
+  useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      let visibleSteps = [];
+
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          visibleSteps.push({
+            index: Number(entry.target.dataset.index),
+            top: entry.boundingClientRect.top,
+          });
+        }
+      });
+
+      if (visibleSteps.length > 0) {
+        const closest = visibleSteps.reduce((prev, curr) =>
+          Math.abs(curr.top) < Math.abs(prev.top) ? curr : prev
+        );
+
+        setActiveStep(closest.index);
+      }
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+
+  stepRefs.current.forEach((el) => {
+    if (el) observer.observe(el);
+  });
+
+  return () => observer.disconnect();
+}, []);
   return (
     <section className="relative w-full py-24 px-6 overflow-hidden bg-white">
-     <img 
-    src={job} 
-    alt=""
-    className="absolute -top-[10%] left-1/2 -translate-x-1/2 w-[150%] h-[700px] 
-               object-cover   pointer-events-none " 
-  />
+      <img
+        src={job}
+        alt=""
+        className="absolute -top-[10%] left-1/2 -translate-x-1/2 w-[150%] h-[700px] 
+               object-cover   pointer-events-none "
+      />
 
       <div className="max-w-4xl mx-auto text-center mb-20 mt-12 relative z-10">
         <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#2D3154] mb-6">
@@ -95,21 +152,27 @@ const HiringTimeline = () => {
         <div className="absolute left-1/2 top-5 bottom-12 w-[2px] bg-gray-100 -translate-x-1/2" />
 
         <div className="flex flex-col items-center">
-          {steps.map((step) => (
-            <Step key={step.id} {...step} />
-          ))}
+        {steps.map((step, index) => (
+  <Step
+    key={step.id}
+    {...step}
+    index={index}
+    ref={(el) => (stepRefs.current[index] = el)}
+    active={activeStep === index}
+  />
+))}
 
           {/* Final Rocket/Journey Step */}
-          <div className="relative flex flex-col items-center mt-4">
+          {/* <div className="relative flex flex-col items-center mt-4">
             <div className="w-10 h-10 rounded-full bg-white border-2 border-gray-100 flex items-center justify-center shadow-sm z-10">
               <span className="text-lg">🤝</span>
             </div>
             <p className="mt-4 font-bold text-gray-900">Start a new journey!</p>
-          </div>
+          </div> */}
         </div>
-      </div>
+      </div>  
     </section>
-  );
+  );  
 };
 
 export default HiringTimeline;

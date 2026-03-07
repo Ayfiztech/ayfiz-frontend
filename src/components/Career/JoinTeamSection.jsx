@@ -1,7 +1,11 @@
+import { useState } from "react";
 import React from "react";
-
+import backgroundImg from "../../assets/images/join the team new.png"
+import videoFile from "../../assets/video/final.mp4";
 const JoinTeamSection = ({ scrollToJobs }) => {
   // Mock data for the floating elements to keep the JSX clean
+  const [playVideo, setPlayVideo] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
   const floatingElements = [
     // {
     //   type: "img",
@@ -33,12 +37,12 @@ const JoinTeamSection = ({ scrollToJobs }) => {
     //   size: "h-1.5 w-1.5",
     //   pos: "top-1/2 -right-4",
     // },
-      // {
-      //   type: "dot",
-      //   color: "bg-black",
-      //   size: "h-1 w-1",
-      //   pos: "bottom-1/3 right-24",
-      // },
+    // {
+    //   type: "dot",
+    //   color: "bg-black",
+    //   size: "h-1 w-1",
+    //   pos: "bottom-1/3 right-24",
+    // },
     // {
     //   type: "dot",
     //   color: "bg-indigo-500",
@@ -73,10 +77,10 @@ const JoinTeamSection = ({ scrollToJobs }) => {
             Join the team
           </h2>
           <p className="text-gray-600 leading-relaxed max-w-md">
-           You've been in jobs that almost fit. Teams that almost got it. Companies that almost had the culture. At Ayfiz, almost isn't in our vocabulary. We're building something real — across industries, across borders and we're looking for the people who've been waiting for a place that actually matches their ambition. This is it.
+            You've been in jobs that almost fit. Teams that almost got it. Companies that almost had the culture. At Ayfiz, almost isn't in our vocabulary. We're building something real — across industries, across borders and we're looking for the people who've been waiting for a place that actually matches their ambition. This is it.
           </p>
-          <button   onClick={scrollToJobs}
- className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 group">
+          <button onClick={scrollToJobs}
+            className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 group">
             Open positions
             <svg
               className="w-4 h-4 transform group-hover:translate-y-1 transition-transform"
@@ -96,15 +100,47 @@ const JoinTeamSection = ({ scrollToJobs }) => {
 
         <div className="relative flex justify-center items-center py-12">
           <div className="relative z-10 w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white">
+
             <img
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"
+              src={backgroundImg}
               alt="Team member"
               className="w-full h-full object-cover brightness-75"
             />
 
-            <button className="absolute inset-0 m-auto w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+            <button
+              onClick={() => setShowVideo(true)}
+              className="absolute inset-0 m-auto w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+            >
               <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-gray-800 border-b-[10px] border-b-transparent ml-1" />
             </button>
+            {showVideo && (
+              <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm">
+                {/* Modal Content */}
+                <div className="relative w-[90%] max-w-4xl">
+
+                  {/* Close Button */}
+                  <button
+                    onClick={() => setShowVideo(false)}
+                    className="absolute -top-12 right-0 bg-white text-black w-10 h-10  flex items-center justify-center shadow-lg hover:bg-gray-200"                  >
+                    ✕
+                  </button>
+
+                  {/* Video */}
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls
+                    className="w-full h-80 rounded-lg shadow-lg"
+                  >
+                    <source src={videoFile} type="video/mp4" />
+                  </video>
+
+                </div>
+              </div>
+            )}
+
           </div>
 
           <div className="hidden md:block absolute inset-0">
