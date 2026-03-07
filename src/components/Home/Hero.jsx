@@ -6,6 +6,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import logo from "../../assets/images/header-white.png";
+import video from '/src/assets/video/Modern_glasswalled_tech_office_with_a_collaborativ.mp4'
 
 const HeroSection = ({ youtubeVideoUrl }) => {
   return (
@@ -25,7 +26,7 @@ const HeroSection = ({ youtubeVideoUrl }) => {
           w-[177.77vh] h-[56.25vw]
           -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         >
-          <source src="/src/assets/video/Modern_glasswalled_tech_office_with_a_collaborativ.mp4" type="video/mp4" />
+          <source src={video} type="video/mp4" />
         </video>
         {/* Dark Overlay to make text pop */}
         <div className="absolute inset-0 bg-black/50" />
@@ -42,7 +43,7 @@ const HeroSection = ({ youtubeVideoUrl }) => {
         <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold leading-tight tracking-tight -mt-8">
           Vision that <span className="text-blue-500">Moves</span>
           <br />
-          Business.
+          Business
         </h1>
       </div>
 

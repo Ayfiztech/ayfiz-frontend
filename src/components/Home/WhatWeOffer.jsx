@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import it from '../../assets/images/IT-image.png';
+import trade from "../../assets/images/trade-image.png";
+import media from "../../assets/images/media-img.png";
 
 const WhatWeOffer = () => {
   const [active, setActive] = useState(1);
@@ -7,15 +9,15 @@ const WhatWeOffer = () => {
   const services = [
     {
       title: "IT",
-      image: "./src/assets/images/IT-image.png",
+      image: it,
     },
     {
       title: "TRADING",
-      image: "./src/assets/images/trade-image.png",
+      image: trade,
     },
     {
       title: "MEDIA",
-      image: "./src/assets/images/media-img.png",
+      image: media,
     },
     // Future cards can be added here 👇
     // { title: "NEW", image: "url" },
