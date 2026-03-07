@@ -1,7 +1,16 @@
 import React from "react";
 import TeamImage from "../../assets/images/team-working.png"; 
+import { useNavigate } from "react-router-dom";
 
 export default function AboutAyfiz({aboutShort}) {
+  const navigate = useNavigate()
+
+  const aboutUsClick = () =>{
+    navigate('/about')
+  }
+   const contactUsClick = () =>{
+    navigate('/contact')
+  }
   return (
     <section className="relative bg-white py-12 lg:py-20 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -50,10 +59,10 @@ export default function AboutAyfiz({aboutShort}) {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8 lg:mt-10">
-            <button className="bg-[#2a4d95] text-white px-10 py-3 rounded-2xl hover:bg-[#1e3a75] transition-all font-bold text-sm text-center">
+            <button onClick={aboutUsClick} className="bg-[#2a4d95] text-white px-10 py-3 rounded-2xl hover:bg-[#1e3a75] transition-all font-bold text-sm text-center">
               Who we are
             </button>
-            <button className="border-2 border-[#2a4d95] text-[#2a4d95] px-10 py-3 rounded-2xl hover:bg-blue-50 transition-all font-bold text-sm text-center">
+            <button onClick={contactUsClick} className="border-2 border-[#2a4d95] text-[#2a4d95] px-10 py-3 rounded-2xl hover:bg-blue-50 transition-all font-bold text-sm text-center">
               Reach Us
             </button>
           </div>

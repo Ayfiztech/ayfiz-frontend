@@ -74,7 +74,7 @@ function App() {
             }
           />
           <Route
-            path="/BrandDetail"
+            path="/IT"
             element={
               <div>
                 <BrandDetailPage />
@@ -83,7 +83,7 @@ function App() {
           />
 
            <Route
-            path="/MediaDetail"
+            path="/media"
             element={
               <div>
                 < MediaDetailPage />
@@ -92,7 +92,7 @@ function App() {
           />
 
            <Route
-            path="/TradingDetail"
+            path="/Trade"
             element={
               <div>
                 <TradingDetailPage />

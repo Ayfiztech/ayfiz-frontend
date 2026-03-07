@@ -48,7 +48,7 @@ const Trading = () => {
               title="Trading"
               description="Every great business needs things to move. Products, materials, goods, opportunities — none of it happens without the right people, the right relationships, and the right knowledge of how the world actually works."
               buttonText="View More"
-                onClick={() => navigate("/TradingDetail")}
+                onClick={() => navigate("/Trade")}
             />
           </motion.div>
         </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const WhatWeOffer = () => {
   const [active, setActive] = useState(1);
@@ -6,18 +7,15 @@ const WhatWeOffer = () => {
   const services = [
     {
       title: "IT",
-      image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      image: "./src/assets/images/IT-image.png",
     },
     {
       title: "TRADING",
-      image:
-        "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
+      image: "./src/assets/images/trade-image.png",
     },
     {
       title: "MEDIA",
-      image:
-        "https://images.unsplash.com/photo-1542038784456-1ea8e935640e",
+      image: "./src/assets/images/media-img.png",
     },
     // Future cards can be added here 👇
     // { title: "NEW", image: "url" },
@@ -70,7 +68,7 @@ const WhatWeOffer = () => {
             <div className="absolute inset-0 bg-blue-900/50" />
 
             {/* Title Position Logic */}
-            <div
+            <div 
               className={`absolute inset-0 flex px-6
               ${
                 active === index
