@@ -23,43 +23,66 @@ const CareerBanner = () => {
     });
   };
 
-  const fadeSlideDown = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1,
-        ease: [0.25, 0.8, 0.25, 1],
-      },
-    },
-  };
-
   return (
     <>
-      <Banner title="Life at Ayfiz" bgImage={CareerImage} breadcrumb="Career" />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <Banner title="Life at Ayfiz" bgImage={CareerImage} breadcrumb="Career" />
+      </motion.div>
 
-      <JoinTeamSection scrollToJobs={scrollToJobs} />
+      <FadeIn>
+        <JoinTeamSection scrollToJobs={scrollToJobs} />
+      </FadeIn>
 
-      <WhyWorkWithUs />
-      <BenefitsGrid />
-      <GallerySection />
-      <TestimonialSection />
+      <FadeIn>
+        <WhyWorkWithUs />
+      </FadeIn>
 
-      <div>
-        <motion.div variants={fadeSlideDown} initial="hidden" animate="visible">
-          <HiringTimeline />
+      <FadeIn>
+        <BenefitsGrid />
+      </FadeIn>
 
-          <div ref={jobBoardRef}>
-            <JobBoard />
-          </div>
+      <FadeIn>
+        <GallerySection />
+      </FadeIn>
 
-          <BlogSection />
-          <SocialFeed />
-        </motion.div>
-      </div>
+      <FadeIn>
+        <TestimonialSection />
+      </FadeIn>
+
+      <FadeIn>
+        <HiringTimeline />
+      </FadeIn>
+
+      <FadeIn>
+        <div ref={jobBoardRef}>
+          <JobBoard />
+        </div>
+      </FadeIn>
+
+      <FadeIn>
+        <BlogSection />
+      </FadeIn>
+
+      <FadeIn>
+        <SocialFeed />
+      </FadeIn>
     </>
   );
 };
+
+const FadeIn = ({ children }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.2 }}
+    transition={{ duration: 0.7, ease: "easeOut" }}
+  >
+    {children}
+  </motion.div>
+);
 
 export default CareerBanner;
