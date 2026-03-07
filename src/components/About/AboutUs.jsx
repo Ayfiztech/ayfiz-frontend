@@ -32,13 +32,14 @@ const AboutSection = () => {
 
                     <div className="space-y-6 text-gray-500 leading-relaxed max-w-md">
                         <p>
-                           The world doesn't need another company that does one thing. It needs one that handles everything — and actually means it.
+                           The world doesn't need another company that does just one thing. It needs one that handles everything — and truly deliver on it,
                         </p>
                         <p className="font-medium text-gray-700 italic">
                             "There has to be a better way to work — so we built it."
                         </p>
                         <p>
-                           Ayfiz Absolutes is a holding company built for the way business really works. Not in neat categories. Not in clean departments. But in the messy, fast-moving, always-changing reality where opportunities don't wait and problems don't schedule themselves..
+                        Ayfiz Absolutes is a holding company designed for how business actually operates. Not in rigid categories. Not in perfectly defined departments. But in the dynamic, fast-moving reality 
+                        where opportunities arise unexpectedly and challenges never arrive on schedule.
                         </p>
                         
                     </div>

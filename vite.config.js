@@ -3,18 +3,10 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
+  base: "/frontend/",   // important
+
   plugins: [
     react(),
     tailwindcss(),
-  ],
-  server: {
-    proxy: {
-      "/api": {
-        target: "https://demo.ayfiz.com",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, "")
-      }
-    }
-  }
+  ]
 })
-
