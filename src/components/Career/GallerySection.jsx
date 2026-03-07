@@ -74,10 +74,10 @@ const GallerySection = () => {
           ))}
 
           {/* Explore Card */}
-          {/* <div className="md:col-span-3 md:row-span-1 bg-[#1A1A1A] p-6 flex flex-col justify-end group cursor-pointer hover:bg-[#252525] transition-colors">
+          <div className="md:col-span-3 md:row-span-1 bg-[#1A1A1A] p-6 flex flex-col justify-end group cursor-pointer hover:bg-[#252525] transition-colors">
             <p className="text-gray-300 text-sm mb-2">Explore more</p>
             <HiOutlineArrowNarrowRight className="text-2xl transition-transform group-hover:translate-x-2" />
-          </div> */}
+          </div>
         </div>
       </div>
     </section>

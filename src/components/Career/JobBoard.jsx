@@ -212,11 +212,11 @@ const JobBoard = () => {
                     href={`mailto:${job.apply_link_or_email}`}
                     className="bg-primary text-white px-6 py-2 rounded-full text-sm font-medium flex items-center gap-2 hover:bg-[#1e213a] transition-colors"
                   >
-                    See Positions <HiOutlineArrowNarrowRight />
+                    Apply Link <HiOutlineArrowNarrowRight />
                   </a>
                 </div>
               </div>
-            ))}
+            ))} 
 
             {filteredJobs.length === 0 && (
               <div className="text-center text-gray-400 py-10">

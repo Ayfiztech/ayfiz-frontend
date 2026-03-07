@@ -12,11 +12,14 @@ import MediaDetailPage from "./pages/MediaDetailPage";
 import TradingDetailPage from "./pages/TradingDetailPage";
 import AboutPage from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
+import ScrollToTop from "./components/Common/ScrollToTop";
 
 function App() {
   return (
 
     <Router>
+      <ScrollToTop />
+
       <div className="flex flex-col min-h-screen bg-gray-100">
         <Navbar />
         <>
