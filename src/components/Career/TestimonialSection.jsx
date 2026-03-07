@@ -5,12 +5,12 @@ import { FaLinkedin, FaQuoteLeft } from "react-icons/fa";
 const TestimonialSection = () => {
   const [testimonials, setTestimonials] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const [isPaused, setIsPaused] = useState(false);
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
         const response = await fetch(
-          "https://demo.ayfiz.com/ayfiz/api/testimonials" 
+          "https://demo.ayfiz.com/ayfiz/api/testimonials"
         );
         const data = await response.json();
         setTestimonials(data.testimonials);
@@ -24,7 +24,7 @@ const TestimonialSection = () => {
 
   //  Auto rotate every 2 seconds
   useEffect(() => {
-    if (testimonials.length === 0) return;
+    if (testimonials.length === 0 || isPaused) return;
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) =>
@@ -33,13 +33,12 @@ const TestimonialSection = () => {
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [testimonials]);
+  }, [testimonials, isPaused]);
 
   if (testimonials.length === 0) {
     return <div className="text-center py-20">Loading testimonials...</div>;
   }
 
-  //  Calculate indexes dynamically
   const main = testimonials[currentIndex];
   const side1 =
     testimonials[(currentIndex + 1) % testimonials.length];
@@ -60,10 +59,11 @@ const TestimonialSection = () => {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center relative z-10">
+        <div className="flex flex-col md:flex-row items-center justify-center relative z-10"
+          >
 
           {/* Main Image */}
-          <div className="w-full md:w-1/3 z-20 shadow-2xl transform md:translate-x-12">
+          <div className="w-full md:w-1/3 z-20 shadow-2xl transform md:translate-x-12"  onMouseEnter={()=>setIsPaused(true)} onMouseLeave={()=>setIsPaused(false)}>
             <img
               src={main.profile_image}
               alt={main.client_name}

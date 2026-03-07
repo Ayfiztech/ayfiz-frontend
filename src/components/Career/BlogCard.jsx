@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
 
-// Reusable Blog Card Component (Author Removed)
 const BlogCard = ({ image, title, date, excerpt }) => {
   const navigate = useNavigate();
 
@@ -57,7 +56,6 @@ const BlogSection = () => {
 
         const formattedData = data.success_stories.map((item) => {
           
-          // Remove HTML tags from content
           const tempDiv = document.createElement("div");
           tempDiv.innerHTML = item.content;
           const plainText = tempDiv.textContent || "";
