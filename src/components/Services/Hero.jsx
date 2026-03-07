@@ -55,7 +55,7 @@ const HeroSection = () => {
                 // onClick={onClick}
                 className="mt-6 bg-[#1B4398] text-white px-6 md:px-8 py-3 text-sm md:text-base font-normal hover:bg-[#163a7d] transition duration-300"
               >
-                Ger in Touch
+                Get in Touch
               </button>
             </div>
           </motion.div>
